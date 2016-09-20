@@ -6,7 +6,11 @@ Bsp:
 	var = "Ein String"		#var ist ein Objekt der Klasse String
 	var.class				#erzeugt Ausgabe String, also den Datentyp
 
-Besonderheiten von Strinks:
+	var = "hallo"
+	var[0] = "H"		#Ein String ist eine Zeichenkette von Chars, quasi ein Array. [0] ist der erste Wert.
+	puts var 
+
+Besonderheiten von Strings:
 	Konkatenieren:
 		var = "String"
 		puts "Dies ist ein " + var
