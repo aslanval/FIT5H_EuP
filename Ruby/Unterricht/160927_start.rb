@@ -14,7 +14,7 @@ class Movie
 	end	
 
 	def thumbs_up(value)
-		@rank = @rank + value
+		@rank = @rank + value	
 	end
 end
 
@@ -22,7 +22,7 @@ obj = Movie.new("Superman", nil)
 puts obj.list_movie
 
 obj2 = Movie.new(nil, "Batman")
-pus tobj2.list_movie2
+puts obj2.list_movie2
 obj2.thumbs_up(7)
 puts obj2.list_movie2
 
