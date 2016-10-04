@@ -2,13 +2,12 @@ Definition
 	Array ist eine geordnete Liste, die Verweise auf andere objekte enthält.
 
 Neues Array anlegen
-	seats []
+	seats = []
 	seats = Array.new
 
-	seats["wert1", "wert2"]		
-	#Eigen_Kommentar: Es wird ein Array erstellt, mit den Objekten wert1, wert2, wert3 usw...
-	das gleiche wie-> 	seats = String.new(wert1)  Objekt wird in Standart-Klasse  String erstellt, mit dem Wert "wert1"
-
+	seats = ["wert1", "wert2"]		
+			#Eigen_Kommentar: Es wird ein Objekt des Typ Arrays erstellt, mit den Objekten des String wert1, wert2, wert3 usw...
+			das gleiche wie-> 	seats = String.new(wert1)  Objekt wird in Standart-Klasse  String erstellt, mit dem Wert "wert1"
 	seats = &w(wert1, wert2)
 
 Werte hinzufügen
