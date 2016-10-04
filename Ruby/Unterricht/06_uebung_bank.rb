@@ -1,32 +1,52 @@
-class Customer
-	def initialize(bank_account, lastname)
-		@bank_account = bank_account
+class Customer							#Klasse
+	def initialize(bank_account, lastname)		#Konstruktor
+		@bank_account = bank_account	#Instanzvariable
+		@lastname = lastname			#Instanzvariable
+	end
+
+	def firstname		#getter(hier eigtl nicht zu gebrauchen)
+		@firstname
+	end
+
+	def lastname		#getter(hier eigtl nicht zu gebrauchen)
+		@lastname
+	end
+
+	def street			#getter(hier eigtl nicht zu gebrauchen)
+		@street
+	end
+
+	def city			#getter(hier eigtl nicht zu gebrauchen)
+		@city
+	end
+
+	def firstname=(firstname)		#setter (Eigenschaft wird erstellt für ein Objekt der Klasse Customer)
+		@firstname = firstname
+	end
+
+	def lastname=(lastname)			#setter	(Eigenschaft wird erstellt für ein Objekt der Klasse Customer)
 		@lastname = lastname
 	end
 
-	def prename(prename)
-		@prename = prename
-	end
-
-	def street(street)
+	def street=(street)				#setter	(Eigenschaft wird erstellt für ein Objekt der Klasse Customer)
 		@street = street
 	end
 
-	def city(city)
+	def city=(city)					#setter	(Eigenschaft wird erstellt für ein Objekt der Klasse Customer)
 		@city = city
 	end
 
 	def print_address
-		"
-		Konto:...........#{@bank_account}
-		Name:............#{@prename} #{@lastname}
-		Straße:..........#{@street}
-		Ort:.............#{@city}"
+		"Konto:".ljust(15,".") + @bank_account.to_s + "\n" +
+		"Name:".ljust(15,".") + @firstname.to_s + " " + @lastname.to_s + "\n" +
+		"Straße:".ljust(15,".") + @street.to_s + "\n" +
+		"Stadt:".ljust(15,".") + @city.to_s + "\n"
 	end
+
 end
 
-customer1 = Customer.new(99999, "Lodgz")
-customer1.prename("Theo")
-customer1.street("Hermelinweg 7")
-customer1.city("22159Hamburg")
-puts customer1.print_address
+obj = Customer.new(9999, "Lodgz")	#Ein Objekt "obj" wird erstellt, der Klasse Customer und Instanzvariablen werden gesetzt
+obj.firstname = "Theo" 				#Eigenschaft firstname wird verwendet und gesetzt
+obj.street = "Hermelinweg 7" 		#Eigenschaft street wird verwendet und gesetzt
+obj.city = "22961 Hamburg" 			#Eigenschaft city wird verwendet und gesetzt
+puts obj.print_address				#Mit Werten des Objekts "obj" wird die Methode print_adress ausgeführt
