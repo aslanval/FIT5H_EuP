@@ -22,7 +22,14 @@ class Movie
     @title = title.capitalize
     @rank = rank
   end
-  
+  def capitalize_title(str)
+  	str_array = str.split
+  	ret = ""
+  	str_array.each do |teilstring|
+  		ret = ret + " " + teilstring.capitalize
+  	end
+  	ret
+  end
   def thumbs_down
     @rank -= 1
   end

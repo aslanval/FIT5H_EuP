@@ -9,7 +9,14 @@ class Game
 		@health << health
 	end
 
+	def blam
+		"#{@players} got blammed!"
+	end
+
 	def play
-		"There are "
+		puts "There are #{@players.size} players in #{@title}:"
+		@players.each do |Methoden|
+			Methoden.blam
+			puts Methoden
 	end	
 end
