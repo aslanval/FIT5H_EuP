@@ -8,7 +8,7 @@ class Kunde
 
 	def adresse
 		@adresse
-		"#{@name.capitalize}, #{@adresse}."
+		"#{@name}, #{@adresse}."
 	end
 end
 
@@ -25,7 +25,8 @@ class Kredit
 end
 
 kunde1 = Kunde.new("Theo Sommer")	#c
-kunde1.name = "theo sonnenschein"	#d
+kunde1.name = "theo sonnenschein".split(/ /).map(&:capitalize).join(" ")	#d
+#kunde1.name = kunde1.name.split(/ /).map(&:capitalize).join(" ")
 puts kunde1.name					#e
 
 kunde1.gehalt = 2000				#f
