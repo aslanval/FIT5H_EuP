@@ -19,4 +19,3 @@ block = Hash[a3.map {|key, value| [key, value]}]
 		puts "Index: #{index} - Wert: #{nummer}"
 	end
 	puts block.class
-
