@@ -37,7 +37,7 @@ class Customer							#Klasse
 	end
 
 	def print_address
-		"Konto:".ljust(15,".") + @bank_account.to_s + "\n" +
+		"Konto:".ljust(15,".") + "#{@bank_account.to_s}" + "\n" +
 		"Name:".ljust(15,".") + @firstname.to_s + " " + @lastname.to_s + "\n" +
 		"Straße:".ljust(15,".") + @street.to_s + "\n" +
 		"Stadt:".ljust(15,".") + @city.to_s + "\n"

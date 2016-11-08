@@ -71,3 +71,8 @@ sp1.add_fahrer(fahrer1)
 sp1.add_fahrzeug(fzg2)
 sp1.add_fahrer(fahrer2)
 puts sp1.play
+
+#@fahrzeuge.each do |lol|
+#	str = str + "Und zwar mit: #{lol.fahren} und #{@fahrer[rand(0..1)].to_s}!\n"
+#end
+#str
