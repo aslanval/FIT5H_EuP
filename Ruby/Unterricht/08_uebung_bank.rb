@@ -6,6 +6,10 @@ class Kunde
 		@name = name
 	end
 
+#	def name=(name)
+#		@name = name.split(/ /).map(&:capitalize).join(" ")
+#	end
+
 	def adresse
 		@adresse
 		"#{@name}, #{@adresse}."
@@ -20,7 +24,11 @@ class Kredit
 
 	def kunde
 		@kunde
+<<<<<<< HEAD
 		"#{@kunde.adresse} Jahresgehalt: #{@kunde.gehalt * 12}"
+=======
+		"#{@kunde.adresse} Jahresgehalt: #{@kunde.gehalt * 12}."
+>>>>>>> 81df2ba2fa2a5a100bde46fc86d8c73c938fe433
 	end
 end
 
@@ -35,4 +43,9 @@ puts kunde1.adresse
 
 kredit1 = Kredit.new(kunde1)
 puts kredit1.kunde
+<<<<<<< HEAD
 kredit1.kredit = 5000
+=======
+kredit1.kredit = 5000
+
+>>>>>>> 81df2ba2fa2a5a100bde46fc86d8c73c938fe433
