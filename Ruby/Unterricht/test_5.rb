@@ -1,0 +1,1 @@
+cars.sort_by{|typ,ps|ps}

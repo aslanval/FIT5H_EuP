@@ -58,3 +58,5 @@ bibliothek.add_buch(buch_1)
 bibliothek.add_buch(buch_2)
 bibliothek.add_buch(buch_3)
 bibliothek.add_buch(buch_4)
+
+puts bibliothek
