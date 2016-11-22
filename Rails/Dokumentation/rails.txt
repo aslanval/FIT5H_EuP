@@ -1,0 +1,41 @@
+Der Befehl rails wird immer in der Basis der Applikations ausgeführt.
+Das Programm rails ermöglicht auf der Console ausgeführt eine Reihe von Aktionen:
+
+1) neuen ordner erstellen in Projekte mit 'movies'
+
+2) mit console in den ordner navigieren und 'rails new flix'
+
+3) unter vendor -> Gemfile den 'therubyracer' aktivieren
+
+4) mit console in den ordner navigieren und 'bundle install'
+
+5) 'rails s' in console startet den Server
+
+6) 'rails g controller movies'
+
+7) unter config routes.rb get "movies => movies#index" hinzufpgen
+
+8) unter controllers movies_controller.rb hinzufügen:
+	def index
+		@movies = ["Iron Man", "Superman", "Spider-Man"]
+	end
+
+9) unter views die index.html.erb z.B.
+	<h1>Movies</h1>
+	<ul>
+		<% @movies.each do |movies| %>
+			<li><%= movies %></li>
+		<% end %>
+	</ul> 
+
+10) http://localhost:3000/movies öffnen
+
+
+rails g controller events
+	erstellt in der App einen Controller mit dem Namen events_controller.rb
+
+rails d controller events
+	löscht die Dateien die durch den Geenrator erstellt wurden
+
+rails g model event name:string location:string price:decimal
+	es werden Dateien zur Erstellung einer Tabelle erzeugt, mit dem Namen events und den Spalten: name, location, price
