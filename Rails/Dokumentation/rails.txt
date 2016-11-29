@@ -19,8 +19,9 @@ rails g model event name:string location:string price:decimal
 
 4) mit console in den ordner navigieren und 'bundle install'		
 
-5) 'rails s' in console startet den Server							 #http://localhost:3000 	rails s p-3001 startet den server auf port 3001
-																	 #http://localhost:3000/events zeigt die Routen an
+5) 'rails s' in console startet den Server				#http://localhost:3000 	rails s p-3001 startet den server auf port 3001
+														#http://localhost:3000/events zeigt die Routen an
+
 6) unter config routes.rb get "movies => movies#index" hinzufügen
 
 7) 'rails g controller movies'
@@ -71,4 +72,15 @@ rails g model event name:string location:string price:decimal
 	
 15) http://localhost:3000/movies öffnen
 
+16) rails g migration AddFieldsToMovies start_date:datetime description:text	#fügt spalten hinzu
+	db/migrate/2016.._add_fields_to 		# da findet man die tabelle
+	rake db:migrate:status		#status abfragen
+	rake db:migrate				#erstellen
+	rake db:rollback			#entfernt den letzten migrate (z.b. tabelle oder spalte)
+	rake db:reset				#loescht alle Tabellen/eintraege und macht ein seed hinterher
+	rake db:seed  				#fuegt die eintraege von seeds.rb hinzu
 
+17) option: in db/migrate/seeds.rb koennen paar basis datensaetze definiert werden:
+	z.B. Event.create(name: "Sommerferien", description: "Schiwtzen, baden, schwitzen", sart_date: 100.days.from_now, location: "Hamburg", price: 1000.00)
+	anschließend rake db:seed
+	#in "rails c" kann man vorher den Befehl pruefen oder mit Events.count die Anzahl der eintraege zaehlen
