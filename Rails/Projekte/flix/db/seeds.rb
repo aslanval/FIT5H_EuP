@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Movie.create(name: "Titanic" , description: "Romanze/Drama" , released_on: "1998-01-08")
+Movie.create(name: "Interstellar" , description: "SciFi" , released_on: "2014-11-06")
+Movie.create(name: "Der Marsianer" , description: "SciFi" , released_on: "2015-10-08")

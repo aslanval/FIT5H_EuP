@@ -11,27 +11,33 @@ rails g model event name:string location:string price:decimal
 	es werden Dateien zur Erstellung einer Tabelle erzeugt, mit dem Namen events und den Spalten: name, location, price
 
 
-1) neuen ordner erstellen in Projekte mit 'movies'					
+(neuen ordner erstellen in Projekte mit 'movies')	 			
 
 2) mit console in den ordner navigieren und 'rails new flix'		
 
 3) unter vendor -> Gemfile den 'therubyracer' aktivieren			 #Wird mit der vorlage gemfile.lock verglichen. Gemfile gibt an welche er laden soll.
 
-4) mit console in den ordner navigieren und 'bundle install'		
+4) im ordner flix 'bundle install'		
 
 5) 'rails s' in console startet den Server				#http://localhost:3000 	rails s p-3001 startet den server auf port 3001
 														#http://localhost:3000/events zeigt die Routen an
 
-6) unter config routes.rb get "movies => movies#index" hinzufügen
+6) config/routes.rb get "movies => movies#index" hinzufügen
 
 7) 'rails g controller movies'
 
-8) unter controllers/movies_controller.rb hinzufügen:
+8) in app/controllers/movies_controller.rb
 	def index
 		@movies = ["Iron Man", "Superman", "Spider-Man"]
 	end
 
-9) unter app/views/events/index.html.erb z.B.
+	oder
+
+	def index
+		@movies = Movies.all hinzufügen
+	end
+
+9) unter app/views/movies/index.html.erb z.B.
 	<h1>Movies</h1>
 	<ul>
 		<% @movies.each do |movies| %>
@@ -41,24 +47,23 @@ rails g model event name:string location:string price:decimal
 
 	oder 
 
-	<h1>Movies>
+	<h1>Movies</h1>
 	<table>
 		<tr>
 			<td>Name</td>
 		</tr>
-		<% @movies.each do |movies|> %>
+		<% @movies.each do |movies| %>
 		<tr>
 			<td><%= movies %></td>
 		</tr>
 	<% end %>
 
-10) rails g model movie name:string				#erstellt eine DB
-	in db/migrate/2016... 
+10) rails g model movie name:string				#erstellt den Create-table befehl in db/migrate/2016... 
 
 11) rake db:migrate								#schaut nach ob in db/migrate/2016... die Tabellen existieren, wenn nicht werden diese erstellt
 
 13) Movies.all (aus Modell Ordner die Klasse als Bezeichnung nehmen)	#zeigt an
-	m = Movies.new		#lasbares und schreibbares atrribut
+	m = Movies.new		#lesbares und schreibbares atrribut
 	m.name = "Weihnachten"
 	m.date = "2016-12-24"
 	m.save				#speichert das attribut
@@ -66,9 +71,6 @@ rails g model event name:string location:string price:decimal
 	oder
 
 	Movies.create(name: "Weinen", datum: "2017-05-05")		#legt direkt einen Datensatz an
-
-14) in app/controllers movies_controller.rb
-	@movies = Movies.all hinzufügen
 	
 15) http://localhost:3000/movies öffnen
 

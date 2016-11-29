@@ -1,13 +1,12 @@
 <h1>Movies</h1>
-
-<ul>
-	
+<table>
+	<tr>
+		<td>Name</td><td>Beschreibung</td><td>Erscheinungsdatum</td>
+	</tr>
 	<% @movies.each do |movies| %>
-		<li>
-			Titel: <%= movies.title %>,
-			Rating: <%= movies.rating %>,
-			Total: <%= movies.total_gross %>.
-		</li>
-	<% end %>
-
-</ul> 
+	<tr>
+		<td><%= movies.name %></td>
+		<td><%= movies.description %></td>
+		<td><%= movies.released_on %></td>
+	</tr>
+<% end %>
