@@ -3,10 +3,16 @@
 	<tr>
 		<td>Name</td><td>Beschreibung</td><td>Erscheinungsdatum</td>
 	</tr>
-	<% @movies.each do |movies| %>
+	<% @movies.each do |movie| %>
 	<tr>
-		<td><%= movies.name %></td>
-		<td><%= movies.description %></td>
-		<td><%= movies.released_on %></td>
+		<td><%= movie.name %></td>
+		<td><%= movie.description %></td>
+		<td><%= movie.released_on %></td>
+		<td><%= link_to "Show", movie_path(movie.id) %></td>
+		<td><%= link_to "Edit", edit_movie_path(movie.id) %></td>
+		<td><%= link_to "Delete", movie_path(movie.id), method: :delete, data: { confirm: 'Sicher löschen?'} %></td>
+
 	</tr>
 <% end %>
+
+<p><%= link_to "Neuer Movie", new_movie_path %></p>
