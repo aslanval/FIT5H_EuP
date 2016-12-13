@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 		@movies = Movie.all
 	end
 	def show
-
+  
 	end
 
 	def new
@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
 	end
 
 	def edit
-
+ 
 	end
 
 	def update
