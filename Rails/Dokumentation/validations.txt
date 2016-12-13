@@ -1,0 +1,5 @@
+Link:
+	
+
+Rails hat standardmäßi eine Validierungsfunktion für Usereingaben.
+Jedes Datenbank Tabellenfeld kann in der jeweiligen Model-Klasse überprüft werden.
