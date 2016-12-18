@@ -15,7 +15,7 @@ rails g model event name:string location:string price:decimal
 
 2) mit console in den ordner navigieren und 'rails new flix'		
 
-3) unter vendor -> Gemfile den 'therubyracer' aktivieren			 #Wird mit der vorlage gemfile.lock verglichen. Gemfile gibt an welche er laden soll.
+3) unter Gemfile den 'therubyracer' aktivieren			 #Wird mit der vorlage gemfile.lock verglichen. Gemfile gibt an welche er laden soll.
 
 4) im ordner flix 'bundle install'		
 
@@ -26,7 +26,7 @@ rails g model event name:string location:string price:decimal
 
 7) 'rails g controller movies'
 
-8) in app/controllers/movies_controller.rb
+8) in app/controllers/movies_controller.rb erstellen
 	def index
 		@movies = ["Iron Man", "Superman", "Spider-Man"]
 	end
