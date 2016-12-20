@@ -1,0 +1,6 @@
+Erstellen Sie eine neue Recscource review mit den Feldern name, stars (integer), comment (text), movie_id(integer)
+Sorgen Sie dafür, dass die abnhängigen Reviews gelöscht werden, wenn ein Movie gelöscht wird.
+
+Verschalten Sie die Resource Review als abhängig von der Movies-ressource.
+Sorfen Sie dafür, dass alle Actions funktionieren.
+

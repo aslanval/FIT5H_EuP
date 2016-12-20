@@ -1,0 +1,18 @@
+16)
+
+.....
+
+else
+	anzahl='echo $var  wc -c'
+	if [[ $anzahl -lt 3 ]]
+		echo Buchstabe
+
+	else
+		echo Wort
+	fi
+fi
+
+
+17)
+echo $(id -u "pulse")
+tail 
