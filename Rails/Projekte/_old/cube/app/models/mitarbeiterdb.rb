@@ -1,2 +1,0 @@
-class Mitarbeiterdb < ApplicationRecord
-end
