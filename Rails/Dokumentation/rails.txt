@@ -3,7 +3,7 @@ Das Programm rails ermöglicht auf der Console ausgeführt eine Reihe von Aktion
 
 rails g controller events
 	erstellt in der App einen Controller mit dem Namen events_controller.rb
-
+ 
 rails d controller events
 	löscht die Dateien die durch den Geenrator erstellt wurden
 
@@ -17,7 +17,7 @@ rails g model event name:string location:string price:decimal
 
 3) unter Gemfile den 'therubyracer' aktivieren			 #Wird mit der vorlage gemfile.lock verglichen. Gemfile gibt an welche er laden soll.
 
-4) im ordner flix 'bundle install'		
+4) im ordner flix 'bundle install'	 	
 
 5) 'rails s' in console startet den Server				#http://localhost:3000 	rails s p-3001 startet den server auf port 3001
 														#http://localhost:3000/events zeigt die Routen an
@@ -55,22 +55,22 @@ rails g model event name:string location:string price:decimal
 		<% @movies.each do |movies| %>
 		<tr>
 			<td><%= movies %></td>
-		</tr>
+		</tr> 
 	<% end %>
 
 10) rails g model movie name:string				#erstellt den Create-table befehl in db/migrate/2016... 
 
 11) rake db:migrate								#schaut nach ob in db/migrate/2016... die Tabellen existieren, wenn nicht werden diese erstellt
 
-13) Movies.all (aus Modell Ordner die Klasse als Bezeichnung nehmen)	#zeigt an
-	m = Movies.new		#lesbares und schreibbares atrribut
+13) Movie.all (aus Modell Ordner die Klasse als Bezeichnung nehmen)	#zeigt an
+	m = Movie.new		#lesbares und schreibbares attribut
 	m.name = "Weihnachten"
 	m.date = "2016-12-24"
 	m.save				#speichert das attribut
 
 	oder
 
-	Movies.create(name: "Weinen", datum: "2017-05-05")		#legt direkt einen Datensatz an
+	Movie.create(name: "Weinen", datum: "2017-05-05")		#legt direkt einen Datensatz an
 	
 15) http://localhost:3000/movies öffnen
 

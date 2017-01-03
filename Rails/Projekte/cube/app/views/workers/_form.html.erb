@@ -1,0 +1,20 @@
+<%= form_for(@worker) do |f| %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :persnr %>
+		<%= f.text_field :persnr %>
+	</p>
+	<p>
+		<%= f.label :gehalt %>
+		<%= f.text_field :gehalt %>
+	</p>
+	<p>
+		<%= f.label :eintritt %>
+		<%= f.datetime_select :eintritt %>
+	</p>
+	<p><%= f.submit %></p>
+
+<% end %> 
