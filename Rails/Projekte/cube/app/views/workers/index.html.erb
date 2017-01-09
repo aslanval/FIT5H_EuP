@@ -20,11 +20,12 @@
 			<td><%= worker.persnr %></td>
 			<td><%= worker.gehalt %></td>
 			<td><%= worker.eintritt %></td>
+			<td><%= link_to "Tasks", worker_tasks_path(worker.id) %></td>
 			<td><%= link_to "Show", worker_path(worker.id) %></td>
 			<td><%= link_to "Edit", edit_worker_path(worker.id) %></td>
 			<td><%= link_to "Delete", worker_path(worker.id), method: :delete, data: { confirm: 'Sicher löschen?'} %></td>
 		</tr>
-	<% end %>
+	<% end %> 
 	</table> 
 	<p><%= link_to "Neuer Mitarbeiter", new_worker_path %></p>  
   </body>

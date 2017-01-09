@@ -1,0 +1,7 @@
+<h1>Editing Task</h1>
+
+<%= render 'form', task: @task %>
+
+<%= link_to 'Show', worker_task_path(@worker.id, @task.id) %> |
+<%= link_to 'Back', worker_tasks_path(@worker.id) %>
+  

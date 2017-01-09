@@ -2,7 +2,7 @@
 2) rake db:migrate
 3) app/models/event.rb		#has_many :registrations hinzufügen
 							#app/models/registration.rb hat mit event.rb eine 1->n Beziehung
-							#has_many :registrations, dependet: :destroy an dem dem has_many anfügen
+							#has_many :registrations, dependent: :destroy an dem dem has_many anfügen
 4) rails c
 	# r = Registration.new
 	# e = Event.first
@@ -10,4 +10,4 @@
 	# r.event = e
 	# r.save
 	# r2 = e.registrations.new
-	# r2.save
+	# r2.save 

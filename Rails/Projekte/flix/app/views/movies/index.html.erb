@@ -1,7 +1,7 @@
 <h1><%= pluralize(@movies.count, "Event" ) %></h1>
 <table>
 	<tr>
-		<td>Name</td><td>Beschreibung</td><td>Erscheinungsdatum</td><td>Ratings</td>
+		<td>Name</td><td>Description</td><td>Release date</td><td>Ratings</td>
 	</tr>
 	<% @movies.each do |movie| %>
 	<tr>
@@ -11,8 +11,8 @@
 		<td><%= link_to "Ratings", movie_reviews_path(movie.id) %></td>
 		<td><%= link_to "Show", movie_path(movie.id) %></td>
 		<td><%= link_to "Edit", edit_movie_path(movie.id) %></td>
-		<td><%= link_to "Delete", movie_path(movie.id), method: :delete, data: { confirm: 'Sicher löschen?'} %></td>
+		<td><%= link_to "Delete", movie_path(movie.id), method: :delete, data: { confirm: 'Are you sure?'} %></td>
 	</tr>
-<% end %>
-
-<p><%= link_to "Neuer Movie", new_movie_path %></p>  
+	<% end %>
+</table>
+<%= link_to "New movie", new_movie_path %>

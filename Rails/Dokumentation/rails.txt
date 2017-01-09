@@ -50,7 +50,7 @@ rails g model event name:string location:string price:decimal
 	<h1>Movies</h1>
 	<table>
 		<tr>
-			<td>Name</td>
+			<td>Name</td> 
 		</tr>
 		<% @movies.each do |movies| %>
 		<tr>

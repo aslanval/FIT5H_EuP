@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubes</title>
+  </head>
+  <body> 
+  	<h1><%= pluralize(@workers.count, "Mitarbeiter" ) %></h1>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>PersonalNr</td>
+			<td>Gehalt</td>
+			<td>Eintrittsdatum</td>
+		</tr>
+		<% @workers.each do |worker| %>
+		<tr>
+			<td><%= worker.name %></td>
+			<td><%= worker.persnr %></td>
+			<td><%= worker.gehalt %></td>
+			<td><%= worker.eintritt %></td>
+			<td><%= link_to "Show", worker_path(worker.id) %></td>
+			<td><%= link_to "Edit", edit_worker_path(worker.id) %></td>
+			<td><%= link_to "Delete", worker_path(worker.id), method: :delete, data: { confirm: 'Sicher löschen?'} %></td>
+		</tr>
+	<% end %>
+	</table> 
+	<p><%= link_to "Neuer Mitarbeiter", new_worker_path %></p>  
+  </body>
+</html> 

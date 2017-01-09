@@ -7,10 +7,10 @@ class WorkersController < ApplicationController
 	def show 
    
 	end
-
+ 
 	def new
 		@worker = Worker.new
-	end
+	end 
 
 	def create
 		@worker = Worker.new(worker_params)
@@ -25,7 +25,7 @@ class WorkersController < ApplicationController
  
 	end
 
-	def update
+	def update 
 		@worker.update(worker_params)
 		redirect_to workers_path
 	end
@@ -42,5 +42,6 @@ class WorkersController < ApplicationController
 		def worker_params
 			params.require(:worker).permit(:name, :persnr, :gehalt, :eintritt)
 		end
-end
-  
+	end
+
+   
