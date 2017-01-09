@@ -43,5 +43,4 @@ class WorkersController < ApplicationController
 			params.require(:worker).permit(:name, :persnr, :gehalt, :eintritt)
 		end
 	end
-end	
    
