@@ -27,3 +27,17 @@ Diese Migrations müssen mit einem seperaten befehl zur Datenbank gesendet werde
 4)	zu der Klasse Objekte erstellen z.B. m1 = Movies.new
 5) 	m1.title = "schoen"
 6)	m1.save
+
+Beziehungen: 
+	1:n Beziehung - In der untergeordneten Tabelle sind beliebig viele Elemente einem Element in der Haupttabelle  zugeordnet.
+	Beispiel: Ein Event hat beliebig viele Teilnehmer.
+
+	Eine Bezihung wird in ActiveRecord über eine Definition in der Model-Klasse hergestellt:
+
+	class event
+		has_many :members
+
+	class member
+		belongs_to :event
+
+	Durch dieser Zuordnung werden beim Starten des Rails-Servers eine Vielzahl von Funktionen ertsellt, die es ermöglichen über die eine Klasse auf die korrespondierende zuzugreifen.

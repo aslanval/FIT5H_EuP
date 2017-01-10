@@ -9,4 +9,4 @@ class Event < ApplicationRecord
 		price.blank? || price.zero?
 	end
 end
- 
+  

@@ -6,8 +6,14 @@
 4) rails c
 	# r = Registration.new
 	# e = Event.first
-	# r
+	# r 
 	# r.event = e
 	# r.save
 	# r2 = e.registrations.new
-	# r2.save 
+	# r2.save  
+
+
+
+	Info zu -> refereences:
+	1)indexierung wird hinzugefügt (intern, dadurch wird shcneller was gefunden)
+	2)belongs_to wird in models mit angelegt, nicht das has_many
