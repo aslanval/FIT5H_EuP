@@ -4,9 +4,9 @@
 							#app/models/registration.rb hat mit event.rb eine 1->n Beziehung
 							#has_many :registrations, dependent: :destroy an dem dem has_many anfügen
 4) rails c
-	# r = Registration.new
+	# r = Registration.new 
 	# e = Event.first
-	# r 
+	# r  
 	# r.event = e
 	# r.save
 	# r2 = e.registrations.new

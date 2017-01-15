@@ -8,7 +8,7 @@ link: http://foundation.zurb.com/sites/docs/v/5.5.3/applications.html
 6) unter app/assets/stylesheets unter application.css  '*= require foundation' hinzufuegen
 7) von http://foundation.zurb.com/sites/docs/top-bar.html die topbar kopieren und unter app/views/layouts als z.B. _top_bar.html.erb speichern
 8) in die application.html.erb -> '    <%= render 'layouts/top_bar' %>' hinzufuegen
-
+ 
 zu 6) topbar:
 <div class="top-bar">
   <div class="top-bar-left">
