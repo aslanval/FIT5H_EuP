@@ -25,7 +25,7 @@ rails g scaffold event name:string location:string price:decimal
 
 3) unter Gemfile den 'therubyracer' aktivieren			 #Wird mit der vorlage gemfile.lock verglichen. Gemfile gibt an welche er laden soll.
 
-4) im ordner flix 'bundle install'	 	
+4) im ordner flix 'bundle install'
 
 5) 'rails s' in console startet den Server				#http://localhost:3000 	rails s p-3001 startet den server auf port 3001
 														#http://localhost:3000/events zeigt die Routen an
@@ -75,7 +75,7 @@ rails g scaffold event name:string location:string price:decimal
 	m.name = "Weihnachten"
 	m.date = "2016-12-24"
 	m.save				#speichert das attribut
-
+ 
 	oder
 
 	Movie.create(name: "Weinen", datum: "2017-05-05")		#legt direkt einen Datensatz an
@@ -89,6 +89,10 @@ rails g scaffold event name:string location:string price:decimal
 	rake db:rollback			#entfernt den letzten migrate (z.b. tabelle oder spalte)
 	rake db:reset				#loescht alle Tabellen/eintraege und macht ein seed hinterher
 	rake db:seed  				#fuegt die eintraege von seeds.rb hinzu
+
+	rails g migration ChangeTableLike #erstellt eine migrate datei mit einer Change Methode
+	change_column :tabellename, :spaltenname, :typ_neu #um den Typ zu ändern von text in string
+	rename_column :tabellenname, :spaltenname_alt, spaltenname_neu #um den Spaltenname zu ändern
 
 17) option: in db/migrate/seeds.rb koennen paar basis datensaetze definiert werden:
 	z.B. Event.create(name: "Sommerferien", description: "Schiwtzen, baden, schwitzen", sart_date: 100.days.from_now, location: "Hamburg", price: 1000.00)

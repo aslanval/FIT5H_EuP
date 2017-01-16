@@ -7,7 +7,7 @@
 
 <p>
   <strong>Book:</strong>
-  <%= @like.book %>
+  <%= @like.book.title %>
 </p>
 
 <%= link_to 'Edit', edit_book_like_path(@book.id, @like.id) %> |

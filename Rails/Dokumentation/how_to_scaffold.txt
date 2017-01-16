@@ -12,8 +12,20 @@
 	# r2 = e.registrations.new
 	# r2.save  
 
+oder
 
+	rails c
+		e = Book.new
+		e.title = "Bogner test"
+		e.author = "Bogner"
+		e.description = "Gutes Buch"
+		e.published_on = "2015-12-02"
+		e.save
+			oder e=Book.create(title: "Neues Buch", author="test")
+		e.likes.create(quality: 2)
+ 
 
 	Info zu -> refereences:
 	1)indexierung wird hinzugefügt (intern, dadurch wird shcneller was gefunden)
 	2)belongs_to wird in models mit angelegt, nicht das has_many
+

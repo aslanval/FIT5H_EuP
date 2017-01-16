@@ -5,11 +5,24 @@
 3. Erstellen Sie eine Resource books mit den Spalten: author, title, description (text), published_on (Date) 
 
 4. Stellen Sie sicher, dass beim Aufruf der Seite die index-Action der Resource Books aufgerufen wird.
+(root'events#index')
 
 5. Binden Sie die topbar ein. Erstellen Sie einen Link in der Navigationsleiste, der auf die Index-Seite verweist.
 
 6.  Erstellen Sie eine untergeordnete Resource Likes, die eine Spalte quality (integer) hat. Sichern Sie ab, dass ein Like immer einem Book-Objekt zugeordnet ist.
 
 7. Stellen Sie sicher, dass der Benutzer bei der Neuanlage/Update eines Likes eine Zahl von 1 bis 5 eingeben muss. Ansonsten wird das Formular nicht gespeichert.
+	#books/app/models/like.rb:
+	  ZAHLEN =
+  	1,
+  	2,
+  	3,
+ 	4,
+ 	5
+
+  validates :quality, inclusion: { in: ZAHLEN }
 
 8. Erstellen Sie einen View-Helper, der für ein Book-Objekt den Durchschnitt aller Likes für dieses Objekt errechnet und auf der Book-Show-Seite ausgibt. 
+
+	1) in books/app/helpers/books_helber.rb eine Methode erstellen bei der das Buch übergeben werden muss.
+	2) die Methode schreiben und in der show.html.erb aufrufen, sowie das Buch dort übergeben.
