@@ -11,4 +11,3 @@ module BooksHelper
 		end
 	end
 end
-   
