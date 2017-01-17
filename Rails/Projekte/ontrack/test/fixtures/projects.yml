@@ -3,11 +3,9 @@
 one:
   title: MyString
   description: MyText
-  start_date: 2017-01-15
-  max_hours: 1
+  start_date: 2017-01-17 08:40:11
 
 two:
   title: MyString
   description: MyText
-  start_date: 2017-01-15
-  max_hours: 1
+  start_date: 2017-01-17 08:40:11

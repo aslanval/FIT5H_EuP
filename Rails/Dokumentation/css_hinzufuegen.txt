@@ -1,4 +1,4 @@
-link: http://foundation.zurb.com/sites/docs/v/5.5.3/applications.html
+link: http://foundation.zurb.com/sites/docs/v/5.5.3/applications.html 
 
 1) gem 'foundation-rails'		#unter Gemfile hinzufuegen
 2) bundle install				#in Konsole

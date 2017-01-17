@@ -1,0 +1,145 @@
+1.
+a)
+rails g scaffold project title:string description:text start_date:datetime
+
+b)
+rake db:migrate
+
+c)
+rails c
+e=Project.create(title: "Prüfungsvorbereitung EuP", description: "Alles was für EuP zu lernen ist", start_date: "2017-04-01")
+d=Project.create(title: "Facharbeit", description: "Planen, Durchführen, Beschreiben eines Themas", start_date: "2017-02-01")
+
+d) 
+app/views/projects/index.html.erb
+pluralize(@projects.count, "Project", "Projects") %>
+
+e)
+app/views/projects/index.html.erb
+<%= truncate(project.description, length: 10) %>
+
+f)
+	1)	de.yml - Datei in config/locales hinzufügen
+	2)	time_formats.rb - Datei in config/initializers hinzufügen mit dem Inhalt:
+		Time::DATE_FORMATS[:default] = "%d.%m.%Y %H:%M"
+	3)	config/application.rb - in die Klasse folgendes hinzufügen:
+		config.i18n.available_locales = [:de, :en]
+		config.time_zone = "Berlin"
+		config.i18n.default_locale = :de  
+
+g)
+app/models/project.rb
+	validates :title, presence: true
+
+h)
+Aufgabe wurde gestrichen
+
+i)
+rails g migration AddFieldsToProjects end_date:datetime
+
+j)
+rake db:migrate
+
+k)
+app/views/projects/_form.html.erb
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.datetime_select :end_date %>
+  </div>
+
+app/views/projects/index.html.erb
+	<th>End date</th>
+	<td><%= project.end_date %></td>
+
+app/views/projects/show.html.erb
+<p>
+  <strong>End date:</strong>
+  <%= @project.end_date %>
+</p>
+
+l)
+app/controllers/project_controller.rb ->  :end_date hinzufügen
+    def project_params
+      params.require(:project).permit(:title, :description, :start_date, :end_date)
+    end
+
+2.
+a) 
+	1)	rails g scaffold iteration title:string description:text start_date:datetime end_date:datetime project:references
+	2)	app/models/project.rb
+		has_many :iterations, dependent: :destroy
+		(durch references, ist belongs_to in iterations schon vorhanden)
+
+b)
+resources :projects do
+  resources :iterations
+end
+
+c)
+before_action :set_project
+    def set_project
+      @project = Project.find(params[:project_id])
+    end
+
+d)
+app/views/projects/index.html.erb
+<td><%= link_to 'Iterations', project_iterations_path(project.id) %></td> 
+
+app/controllers/iterations_controller.rb
+  def index
+    @iterations = @project.iterations
+  end
+
+e)
+rails c
+Project.last.iterations.create(title: "Literatur sichten", description: "Alles über das Thema zusammensuchen", start_date: "2017-02-01", end_date: "2017-02-10")
+
+f)
+app/views/iterations/index.html.erb
+<h1>Iterations für Projekt: <%= @project.title %></h1>
+
+Show -> project_iteration_path(@project.id, iteration.id)
+Edit -> edit_project_iteration_path(@project.id, iteration.id)
+Destroy -> project_iteration_path(@project.id, iteration.id)
+Neue Iteration -> new_project_iteration_path(@project.id)
+
+g)
+  def new
+    @iteration = @project.iterations.new
+  end
+
+  def create
+    @iteration = @project.iterations.new(iteration_params)
+    .
+    .
+  end
+
+  def update
+    redirect_to @iteration -> redirect_to project_iteration_path(@project.id, @iteration.id)
+    .
+    .
+  end
+
+  def destroy
+    iterations_url   ändern in   project_iterations_url(@project.id)
+    .
+    .
+  end
+
+h)
+app/views/iterations/_form.html.erb
+das folgende Array in die Schleife hinzufügen:
+<%= form_for([@project, @iteration]) do |f| %>
+
+
+Zusätzlich außer der Aufgaben in den View Dateien:
+edit.html.erb:
+Show -> project_iteration_path(@project.id, @iteration.id)
+Back -> project_iterations_path(@project.id)
+
+new.html.erb:
+Back -> project_iterations_path(@project.id)
+
+show.html.erb:
+Edit -> edit_project_iteration_path(@project.id, @iteration.id) %>
+Back -> project_iterations_path(@project.id, @iteration.id)

@@ -1,6 +1,6 @@
 class RegistrationsController < ApplicationController
   before_action :set_registration, only: [:show, :edit, :update, :destroy]
-  before_action :set_event
+  before_action :set_event 
 
   # GET /registrations
   # GET /registrations.json

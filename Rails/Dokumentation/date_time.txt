@@ -9,4 +9,4 @@ Time::DATE_FORMATS[:default] = "%d.%m.%Y %H:%M"
 config/application.rb - in die Klasse folgendes hinzufügen:
 		config.i18n.available_locales = [:de, :en]
 		config.time_zone = "Berlin"
-		config.i18n.default_locale = :de
+		config.i18n.default_locale = :de 

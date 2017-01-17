@@ -1,6 +1,6 @@
 Der Befehl rails wird immer in der Basis der Applikations ausgeführt.
 Das Programm rails ermöglicht auf der Console ausgeführt eine Reihe von Aktionen:
-
+ 
 rails g controller events
 	erstellt in der App einen Controller mit dem Namen events_controller.rb
  
@@ -80,7 +80,7 @@ rails g scaffold event name:string location:string price:decimal
 
 	Movie.create(name: "Weinen", datum: "2017-05-05")		#legt direkt einen Datensatz an
 	
-15) http://localhost:3000/movies öffnen
+15) http://localhost:3000/movies öffnen 
 
 16) rails g migration AddFieldsToMovies start_date:datetime description:text	#fügt spalten hinzu
 	db/migrate/2016.._add_fields_to 		# da findet man die tabelle
