@@ -1,0 +1,4 @@
+1) ps -aux | grep rails
+2) prozess ID entnehmen:
+theo(Benutzer)	4010(PIT-ID)
+kill -9 4010
