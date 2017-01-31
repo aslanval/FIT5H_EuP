@@ -1,0 +1,5 @@
+1) in app/views/layouts/application.html.erb hinzufügen:
+      <div class="row float-right">
+        <%= image_tag 'logo.png' %>
+      </div>
+2) in app/assets/images die logo.png Datei hinzufügen

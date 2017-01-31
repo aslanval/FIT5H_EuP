@@ -1,12 +1,13 @@
 class EventsController < ApplicationController
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
+	before_action :require_signin, :except => [:index] 
 	def index
 		@events = Event.all
 	end
 
-	def show
+	def show  
 
-	end
+	end 
 
 	def new
 		@event = Event.new
@@ -23,7 +24,7 @@ class EventsController < ApplicationController
 
 	def edit
 
-	end
+	end 
 
 	def update
 		@event.update(event_params)
