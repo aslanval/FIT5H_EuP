@@ -1,18 +1,27 @@
 <h1><%= pluralize(@movies.count, "Event" ) %></h1> 
 <table>
 	<tr> 
-		<td>Name</td><td>Description</td><td>Release date</td><td>Ratings</td>
+		<td>Name</td>
+		<td>Description</td>
+		<td>Release date</td>
+		<% if current_user %>
+			<td>Ratings</td>
+		<% end %>
 	</tr>
 	<% @movies.each do |movie| %>
 	<tr>
 		<td><%= movie.name %></td>
 		<td><%= movie.description %></td>
 		<td><%= movie.released_on %></td>
-		<td><%= link_to "Ratings", movie_reviews_path(movie.id) %></td>
-		<td><%= link_to "Show", movie_path(movie.id) %></td>
-		<td><%= link_to "Edit", edit_movie_path(movie.id) %></td>
-		<td><%= link_to "Delete", movie_path(movie.id), method: :delete, data: { confirm: 'Are you sure?'} %></td>
+		<% if current_user %>
+			<td><%= link_to "Ratings", movie_reviews_path(movie.id) %></td>
+			<% if current_user_admin? %>
+				<td><%= link_to "Show", movie_path(movie.id) %></td>
+				<td><%= link_to "Edit", edit_movie_path(movie.id) %></td>
+				<td><%= link_to "Delete", movie_path(movie.id), method: :delete, data: { confirm: 'Are you sure?'} %></td>
+			<% end %>
+		<% end %>
 	</tr>
 	<% end %>
 </table>
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "New movie", new_movie_path %> 

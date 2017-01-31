@@ -28,3 +28,65 @@ before_action :require_correct_user, only: [:edit, :update, :destroy]
 
 7) in app/controllers/users_controller.rb in die create Methode hinzufügen:
 session[:user_id] = @user.id
+
+rails g migration AddAdminToUsers admin:boolean
+rake db:migrate
+
+8) in app/controllers/application_controller.rb hinzufügen:
+  def require_admin
+      unless current_user && current_user.admin?
+        redirect_to root_url, alert: "You are no admin!"
+      end
+  end
+
+9) in app/controllers/events_controller.rb hinzufügen:
+before_action :require_admin, :except => [:index, :show]
+
+10) in app/controllers/application_controller.rb hinzufügen:
+  def current_user_admin?
+      current_user && current_user.admin?
+  end
+  helper_method :current_user_admin?
+
+
+Zusatz:
+1) rails g migration MakeRegistrationAsAJoinTable
+2) bei db/migrate/ID_make...rb hinzufügen:
+  def up
+  	Registration.delete_all
+  	remove_column :registrations, :name
+  	remove_column :registrations, :email
+  	add_column :registrations, :user_id, :integer
+  end
+  def down
+  	Registration.delete_all
+  	add_column :registrations, :name, :string
+  	add_column :registrations, :email, :string
+  	add_column :registrations, :user_id
+  end
+
+3)
+registration.rb hinzufügen:
+belongs_to :user
+
+user.rb hinzufügen:
+has_many :registrations, :dependent => :destroy
+
+4)
+in der _form.html.erb Name und E-Mail entfernen.
+und anpassen (siehe rails_app)
+
+5)
+in registration_controller.rb:
+registration_params anpassen.. (siehe rails_app)
+
+6) im registrations controller  in die create Methode folgendes hinzufügen:
+@registration.user_id = current_user.id
+#damit die beutzer-id mit pbergeben wird fpr die registrierung
+
+7) app/models/registration.rb:
+validates anpassen:
+  validates :user_id, presence: true
+
+8) in der show.html.erb & index.html.erb von registration:
+.user. hinzufügen bei email und name

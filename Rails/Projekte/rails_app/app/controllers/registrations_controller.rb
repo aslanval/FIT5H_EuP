@@ -27,7 +27,7 @@ class RegistrationsController < ApplicationController
   # POST /registrations.json
   def create
     @registration = @event.registrations.new(registration_params)
-
+    @registration.user_id = current_user.id
     respond_to do |format| 
       if @registration.save
         format.html { redirect_to event_registration_path(@event.id, @registration.id), alert: 'Registration was successfully created.' }
@@ -36,7 +36,7 @@ class RegistrationsController < ApplicationController
         format.html { render :new }
         format.json { render json: @registration.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # PATCH/PUT /registrations/1
@@ -75,6 +75,6 @@ class RegistrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registration_params
-      params.require(:registration).permit(:name, :email, :how_heard, :event_id)
+      params.require(:registration).permit(:how_heard, :user_id, :event_id)
     end
 end

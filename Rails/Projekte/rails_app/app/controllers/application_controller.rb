@@ -12,4 +12,15 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-end
+  def require_admin
+      unless current_user && current_user.admin?
+        redirect_to root_url, alert: "You are no admin!"
+      end
+  end
+
+  def current_user_admin?
+      current_user && current_user.admin?
+  end
+  helper_method :current_user_admin?
+end 
+  
