@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
   
-  	def require_signin
+  def require_signin
 		unless current_user
 			redirect_to new_session_url, alert: "Please sign in first!!!"
 		end
@@ -19,9 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_admin?
-      unless current_user && current_user.admin?
-    end
+      current_user && current_user.admin?
   end
   helper_method :current_user_admin?
 end
- 

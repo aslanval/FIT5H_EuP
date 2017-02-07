@@ -155,3 +155,9 @@ Zusatz Phil:
 		<td><%= registration.user.name %></td>
         <td><%= registration.user.email %></td>
         	Anpassen der Darstellung
+
+  def current_user_admin?
+      unless current_user && current_user.admin?
+    end
+  end
+  helper_method :current_user_admin?

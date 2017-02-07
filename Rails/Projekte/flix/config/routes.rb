@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 	get 'signup' => 'users#new'
 	
 	resource :session
-  resources :users
+  	resources :users
 	resources :movies do
 		resources :reviews
+		resources :favorites
 	end	
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   

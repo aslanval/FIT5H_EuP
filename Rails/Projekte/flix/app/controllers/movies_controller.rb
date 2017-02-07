@@ -6,8 +6,8 @@ class MoviesController < ApplicationController
 		@movies = Movie.all
 	end
 
-	def show 
-  
+	def show  
+  	  @favoriters = @movie.favoriters 
 	end
 
 	def new

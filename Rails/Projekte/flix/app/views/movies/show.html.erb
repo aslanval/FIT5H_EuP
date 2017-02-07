@@ -5,4 +5,22 @@
 <h3>When</h3>
 <p><%= @movie.released_on %></p>
 
+<% if @favoriters.any? %>
+	<h3>Favoriters</h3>
+	<p>
+		<ul>
+			<% @favoriters.each do |user| %>
+				<li><%= user.email %></li>
+			<% end %>
+		</ul> 
+	</p>
+<% end %>
+<p>
+	<% if favorite = Favorite.where(user_id: current_user.id, movie_id: @movie.id).first %>
+		<%= link_to 'DISFAVORITE', movie_favorite_path(@movie.id, favorite.id), method: :delete, class: 'button alert'%>
+	<% else %>
+		<%= button_to 'FAVORITE', movie_favorites_path(@movie), class: 'button primary' %>
+	<% end %>
+</p>
+
 <p><%= link_to "Show all movies", movies_path %></p>

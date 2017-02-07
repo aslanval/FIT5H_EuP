@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
 	def show  
   	  @likers = @event.likers
+  	  @categories = @event.categories 
 	end
 
 	def new
@@ -42,7 +43,7 @@ class EventsController < ApplicationController
 			@event = Event.find(params[:id])
 		end
 		def event_params
-			params.require(:event).permit(:name, :description, :location, :price, :start_date)
+			params.require(:event).permit(:name, :description, :location, :price, :start_date, :category_ids => [])
 		end
 end
  

@@ -1,4 +1,4 @@
-<h1><%= pluralize(@movies.count, "Event" ) %></h1> 
+<h1><%= pluralize(@movies.count, "Movies" ) %></h1> 
 <table>
 	<tr> 
 		<td>Name</td>
@@ -7,8 +7,13 @@
 		<% if current_user %>
 			<td>Ratings</td>
 		<% end %>
+		<% if current_user_admin? %>
+				<td>Show</td>
+				<td>Edit</td>
+				<td>Delete</td>
+		<% end %>
 	</tr>
-	<% @movies.each do |movie| %>
+	<% @movies.each do |movie| %> 
 	<tr>
 		<td><%= movie.name %></td>
 		<td><%= movie.description %></td>
@@ -24,4 +29,4 @@
 	</tr>
 	<% end %>
 </table>
-<%= link_to "New movie", new_movie_path %> 
+<%= link_to "New movie", new_movie_path if current_user_admin? %> 
