@@ -1,0 +1,43 @@
+1) rails g resource like event:references user:references
+2) (bundle exec) rake db:migrate
+3) app/models/event.rb hinzufügen:
+	has_many :likes, dependent: :destroy
+	has_many :likers, through: :likes, source: :user
+4) app/models/user.rb hinzufügen:
+ 	has_many :likes, dependent: :destroy
+ 	has_many :liked_events, through: :likes, source: :event
+5) Um beim User zu sehen welche Events er gelikt hat:
+	app/controllers/users_controller.rb hinzufügen:
+	def show
+		@liked_events = @user.liked_events
+	end
+6) Um beim User zu sehen welche Events er gelikt hat:
+	app/views/users/show.html.erb
+<% if @liked_events.any? %>
+	<h3>Liked Events</h3>
+	<p>
+		<ul>
+			<% @liked_events.each do |event| %>
+				<li><%= event.name %></li>
+			<% end %>
+		</ul>
+	</p>
+<% end %>
+7) Um beim Event zu sehen welche User es gelikt hat:
+	app/controllers/events_controller.rb hinzufügen:
+	def show  
+  	  @likers = @event.likers
+	end
+8) Um beim Event zu sehen welche User es gelikt hat:
+	app/views/users/show.html.erb
+<% if @likers.any? %>
+	<h3>Likers</h3>
+	<p>
+		<ul>
+			<% @likers.each do |user| %>
+				<li><%= user.email %></li>
+			<% end %>
+		</ul>
+	</p>
+<% end %>
+9) 

@@ -11,4 +11,15 @@
 <h3>Price</h3>
 <p><%= format_price @event %></p>
 
-<p><%= link_to "Alle Events anzeigen", events_path %></p> 
+<% if @likers.any? %>
+	<h3>Likers</h3>
+	<p>
+		<ul>
+			<% @likers.each do |user| %>
+				<li><%= user.email %></li>
+			<% end %>
+		</ul>
+	</p>
+<% end %>
+
+<p><%= link_to "Alle Events anzeigen", events_path %></p>
