@@ -29,8 +29,9 @@ before_action :require_correct_user, only: [:edit, :update, :destroy]
 7) in app/controllers/users_controller.rb in die create Methode hinzufügen:
 session[:user_id] = @user.id
 
+nur wenn admin variable nicht vorhanden ist:
 rails g migration AddAdminToUsers admin:boolean
-rake db:migrate
+rails db:migrate
 
 8) in app/controllers/application_controller.rb hinzufügen:
   def require_admin
@@ -49,7 +50,7 @@ before_action :require_admin, :except => [:index, :show]
   helper_method :current_user_admin?
 
 
-Zusatz Aslan:
+Zusatz Aslan für nm:
 1) rails g migration MakeRegistrationAsAJoinTable
 2) bei db/migrate/ID_make...rb hinzufügen:
   def up

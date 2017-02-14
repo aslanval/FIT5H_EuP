@@ -3,17 +3,19 @@
 3)	in app/models/user.rb hinzufügen:
   validates :name ,presence: true
   validates :email ,presence: true, format: { with: /(\S+)@(\S+)/ }, uniqueness: { case_sensitive: false }
-4)	(ggf mit 'bundle exec' vorher) rake db:migrate
+4)	rails db:migrate
 5)	rake routes zeigt alle Routen an
 unter app/views/layouts/_top_bar.html.erb hinzufügen.
 normalerweise funktioniert: 
 <%= link_to 'Sign Up', new_user_path %>
 da URL users/new unprofessionell ist:
 <%= link_to 'Sign Up', signup_path %>
+
 in config/routes.rb -> get 'signup' => 'users#new' hinzufügen(nach oben mit root)
+
 6)	rails g controller sessions
 7)	config/routes.rb resource :session
-	nicht in Mehrzahl, weil wir nur einen Login haben. Controller bleibt Plural für 'scönheit'
+	nicht in Mehrzahl, weil wir nur einen Login haben. Controller bleibt Plural für 'schönheit'
 8)	unter app/views/layouts/_top_bar.html.erb hinzufügen.
 <%= link_to 'Sign In', new_session_path %>
 9)	In sessions_controller.rb:

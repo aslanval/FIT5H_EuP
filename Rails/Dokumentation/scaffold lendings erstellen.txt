@@ -1,0 +1,28 @@
+scaffold lendings erstellen
+
+1) Button 'ausleihen' bei Books erstellen, also 'lendings'
+
+	<%= button_to 'Ausleihen', ledings_path(book_id: bookd.id) %>
+	#da button_to verwendet wurde, wird dies automatisch mit POST gesendet
+	#man hätte auch link_to nehmen können, und 'method: :post' hinten anhängen
+
+2) in den lendings_controller.rb hinzufügen
+
+	def create
+		params[:lending] = { book_id: params[:book_id]}, user_id: current_user.id, lending_date: Date.today }
+	.
+	.
+		redirect_to lending ändern zu lendings_path
+	.
+	.
+	.
+	end
+
+3) def index
+	@lendings = Lending.where(user_id: current_user.id)
+
+4) index.html.erb von lendings
+<h1> Lendings von <%= current_user.login %> </h1>
+das NEW unten entfernen
+
+5)

@@ -1,7 +1,7 @@
 Der Befehl rails wird immer in der Basis der Applikations ausgeführt.
 Das Programm rails ermöglicht auf der Console ausgeführt eine Reihe von Aktionen:
  
-rails g controller events
+rails g controller events 
 	erstellt in der App einen Controller mit dem Namen events_controller.rb
  
 rails d controller events
