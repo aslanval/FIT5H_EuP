@@ -1,9 +1,9 @@
 1)	rails g scaffold user name:string email:string password:digest		#gleichzeitig wird in app/models/user.rb has_secure_password hinzugefügt
-2)	in gemfile den bcrypt aktivieren -> bundle install
+2)	in gemfile den bcrypt aktivieren -> bundle install 
 3)	in app/models/user.rb hinzufügen:
   validates :name ,presence: true
   validates :email ,presence: true, format: { with: /(\S+)@(\S+)/ }, uniqueness: { case_sensitive: false }
-4)	rails db:migrate
+4)	rails db:migrate 
 5)	rake routes zeigt alle Routen an
 unter app/views/layouts/_top_bar.html.erb hinzufügen.
 normalerweise funktioniert: 

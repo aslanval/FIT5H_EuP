@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intime</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="row float-right">
+          <%= image_tag 'logo.png' %>
+      </div>
+    	<%= render 'layouts/top_bar' %>
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+      <div id="remote_container"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+  <div class="form-group">
+    <%= f.label :department_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= collection_select(:department_id, 1, Department.all, :id, :name) %>
+    </div>
+    <%=f.error_span(:department_id) %>
+  </div>
