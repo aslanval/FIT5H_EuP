@@ -1,0 +1,19 @@
+<%- model_class = User -%>
+<div class="container-fluid">
+  <div class="page-header">
+  <% if current_user_moderator? %>
+    <h2 class="text-center">Edit User <small><%= @user.name %></small></h2>
+  <% else %>
+    <h2 class="text-center">Change your password</small></h2>
+  <% end %>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+		  <%= render :partial => 'form' %>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>

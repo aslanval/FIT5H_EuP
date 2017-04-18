@@ -28,7 +28,7 @@
           <% if book.lendings.exists?(return_date: nil) %>
             <td>Buch ist leider ausgeliehen</td>
           <% else %>
-            <td><%= button_to 'Ausleihen', lendings_path(book_id: book.id) %></td>
+            <td><%= button_to 'Ausleihen', user_lendings_path(current_user, book_id: book.id) %></td>
           <% end %>
         <% end %>
       </tr>

@@ -1,0 +1,39 @@
+<%- model_class = User -%>
+<div class="container-fluid">
+  <div class="page-header">
+    <h2 class="text-center">Details <small>for <%= @user.prename %> <%= @user.lastname %></small></h2>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <dl class="dl-horizontal">
+        <dt><strong><%= model_class.human_attribute_name(:lastname) %>:</strong></dt>
+        <dd><%= @user.lastname.capitalize %></dd>
+        <dt><strong><%= model_class.human_attribute_name(:prename) %>:</strong></dt>
+        <dd><%= @user.prename.capitalize %></dd>
+        <dt><strong><%= model_class.human_attribute_name(:dateofbirth) %>:</strong></dt>
+        <dd><%= @user.dateofbirth.strftime("%d.%m.%Y") %></dd>
+        <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
+        <dd><%= @user.gender.capitalize %></dd>
+        <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+        <dd><%= @user.email %></dd>
+        <dt><strong><%= model_class.human_attribute_name(:department_id) %>:</strong></dt>
+        <dd><%= @user.department.name.capitalize %></dd>
+      </dl>
+      <%= link_to t('.back', :default => t("helpers.links.back")),
+                    users_path, :class => 'btn btn-default'  %>
+      <% if current_user_moderator? %>
+      <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                    edit_user_path(@user), :class => 'btn btn-default' %>
+      <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                    user_path(@user),
+                    :method => 'delete',
+                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                    :class => 'btn btn-danger' %>
+      <% end %>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>

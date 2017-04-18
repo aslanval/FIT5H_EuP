@@ -1,0 +1,26 @@
+<%- model_class = Event -%> 
+<div class="container-fluid">
+  <div class="page-header">
+    <h2 class="text-center">Events <small>for all Users</small></h2>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 grey">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#seminar" aria-controls="seminar" role="tab" data-toggle="tab">Seminars</a></li>
+        <li role="presentation"><a href="#holiday" aria-controls="holiday" role="tab" data-toggle="tab">Holidays</a></li>
+        <li role="presentation"><a href="#project" aria-controls="project" role="tab" data-toggle="tab">Projects</a></li>
+        <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">Others</a></li>
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="seminar"><%= render 'events', events: @events_seminar %></div>
+        <div role="tabpanel" class="tab-pane" id="holiday"><%= render 'events', events: @events_holiday %></div>
+        <div role="tabpanel" class="tab-pane" id="project"><%= render 'events', events: @events_project %></div>
+        <div role="tabpanel" class="tab-pane" id="other"><%= render 'events', events: @events_other %></div>
+      </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>

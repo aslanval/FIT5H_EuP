@@ -1,10 +1,17 @@
 class LendingsController < ApplicationController
   before_action :set_lending, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   # GET /lendings
   # GET /lendings.json
   def index
-    @lendings = Lending.all
+    if current_user_admin?
+      @lendings_open = Lending.lended_open
+      @lendings_returned = Lending.lended_returned
+    else
+      @lendings_open = Lending.given_user(@user.id).lended_open
+      @lendings_returned = Lending.given_user(@user.id).lended_returned
+    end
   end
 
   # GET /lendings/1
@@ -29,7 +36,7 @@ class LendingsController < ApplicationController
 
     respond_to do |format|
       if @lending.save
-        format.html { redirect_to lendings_path, notice: 'Lending was successfully created.' }
+        format.html { redirect_to user_lendings_path(current_user.id), notice: 'Lending was successfully created.' }
         format.json { render :show, status: :created, location: @lending }
       else
         format.html { render :new }
@@ -44,7 +51,7 @@ class LendingsController < ApplicationController
     params[:lending] = {return_date: Date.today}
     respond_to do |format|
       if @lending.update(lending_params)
-        format.html { redirect_to lendings_path, notice: 'Lending was successfully updated.' }
+        format.html { redirect_to user_lendings_path(current_user.id), notice: 'Lending was successfully updated.' }
         format.json { render :show, status: :ok, location: @lending }
       else
         format.html { render :edit }
@@ -58,7 +65,7 @@ class LendingsController < ApplicationController
   def destroy
     @lending.destroy
     respond_to do |format|
-      format.html { redirect_to lendings_url, notice: 'Lending was successfully destroyed.' }
+      format.html { redirect_to user_lendings_url, notice: 'Lending was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -67,6 +74,9 @@ class LendingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_lending
       @lending = Lending.find(params[:id])
+    end
+    def set_user
+      @user = User.find(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

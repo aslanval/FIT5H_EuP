@@ -1,0 +1,16 @@
+<%- model_class = Work -%>
+<div class="container-fluid">
+  <div class="page-header">
+    <h2 class="text-center">Create a new Time <small>for <%= @user.prename %> <%= @user.lastname %></small></h2>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+			<%= render :partial => 'form' %>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>
+ 

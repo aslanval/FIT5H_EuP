@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">InTime</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><%= link_to "<span class='glyphicon glyphicon-time'></span> Time Logging".html_safe, root_path %></li>
+      <% if current_user %>
+      <li><%= link_to "<span class='glyphicon glyphicon-stats'></span> Working Hours".html_safe, user_works_path(current_user.id) %></li>
+      <% end %>
+      <li><%= link_to "<span class='glyphicon glyphicon-globe'></span> Events".html_safe, events_path %></li>
+      <li><%= link_to "<span class='glyphicon glyphicon-calendar'></span> Calendar".html_safe, calendar_path %></li>
+      <li><%= link_to "<span class='glyphicon glyphicon-user'></span> Users".html_safe, users_path %></li>
+      <li><%= link_to "<span class='glyphicon glyphicon-list-alt'></span> Departments".html_safe, departments_path %></li>
+      <li>
+        <div id="time" class="small"></div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
+        <li><%= link_to "<span class='glyphicon glyphicon-log-out'></span>  Logout: ".html_safe + current_user.prename.capitalize + " ".html_safe + current_user.lastname.capitalize, session_path, method: :delete %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav> 

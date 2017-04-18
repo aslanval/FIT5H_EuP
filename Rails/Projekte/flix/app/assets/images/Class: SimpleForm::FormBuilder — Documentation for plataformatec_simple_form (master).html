@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SimpleForm::FormBuilder
+  
+    — Documentation for plataformatec/simple_form (master)
+  
+</title>
+
+  <link rel="stylesheet" href="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/style.css" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/common.css" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/custom.css" type="text/css" charset="utf-8">
+
+<script async="" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/analytics.js"></script><script type="text/javascript" charset="utf-8">
+  pathId = "SimpleForm::FormBuilder"
+  relpath = '/';
+  docsPrefix = '/github/plataformatec/simple_form/master';
+  listPrefix = '/list/github/plataformatec/simple_form/master';
+  searchPrefix = '/search/github/plataformatec/simple_form/master';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/autocomplete.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/rubydoc_custom.js"></script>
+
+
+  <script type="text/javascript" async="" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/in.php"></script><script type="text/javascript" async="" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/in_002.php"></script><script type="text/javascript" async="" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/in_003.php"></script></head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/class.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <form class="search" method="get" action="/search/github/plataformatec/simple_form/master">
+  <input name="q" placeholder="Search" id="search_box" size="30" autocomplete="off" class="ac_input" type="search">
+</form>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $('#search_box').autocomplete($('#search_box').parent().attr('action'), {
+      width: 200,
+      formatItem: function(item) {
+        var values = item[0].split(",");
+        return values[0] + (values[1] == '' ? "" : " <small>(" + values[1] + ")</small>");
+      }
+    }).result(function(event, item) {
+      var values = item[0].split(",")
+      $('#search_box').val(values[1]);
+      location.href = values[3];
+      return false;
+    });
+  });
+</script>
+
+<div id="menu">
+  
+    <a href="http://www.rubydoc.info/github" target="_top">Libraries</a> »
+    <span class="title">plataformatec/simple_form <small>(master)</small></span>
+  
+  
+    »
+    <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/index">Index (F)</a> »
+    <span class="title"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span>
+     » 
+    <span class="title">FormBuilder</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="http://www.rubydoc.info/list/github/plataformatec/simple_form/master/class">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SimpleForm::FormBuilder
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">ActionView::Helpers::FormBuilder</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionView::Helpers::FormBuilder</li>
+          
+            <li class="next">SimpleForm::FormBuilder</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/MapType" title="SimpleForm::MapType (module)">MapType</a></span></dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs" title="SimpleForm::Inputs (module)">Inputs</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/simple_form/form_builder.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="ACTIONS-constant" class="">ACTIONS =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>When action is create or update, we still should use new and edit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class="lbrace">{</span>
+  <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">create</span><span class="tstring_end">'</span></span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">new</span><span class="tstring_end">'</span></span><span class="comma">,</span>
+  <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">update</span><span class="tstring_end">'</span></span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">edit</span><span class="tstring_end">'</span></span>
+<span class="rbrace">}</span></pre></dd>
+    
+      <dt id="ATTRIBUTE_COMPONENTS-constant" class="">ATTRIBUTE_COMPONENTS =
+        
+      </dt>
+      <dd><pre class="code"><span class="lbracket">[</span><span class="symbol">:html5</span><span class="comma">,</span> <span class="symbol">:min_max</span><span class="comma">,</span> <span class="symbol">:maxlength</span><span class="comma">,</span> <span class="symbol">:placeholder</span><span class="comma">,</span> <span class="symbol">:pattern</span><span class="comma">,</span> <span class="symbol">:readonly</span><span class="rbracket">]</span></pre></dd>
+    
+  </dl>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#object-instance_method" title="#object (instance method)">#<strong>object</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the value of attribute object.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#object_name-instance_method" title="#object_name (instance method)">#<strong>object_name</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the value of attribute object_name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#template-instance_method" title="#template (instance method)">#<strong>template</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the value of attribute template.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#wrapper-instance_method" title="#wrapper (instance method)">#<strong>wrapper</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the value of attribute wrapper.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#discovery_cache-class_method" title="discovery_cache (class method)">.<strong>discovery_cache</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#association-instance_method" title="#association (instance method)">#<strong>association</strong>(association, options = {}, &amp;block)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Helper for dealing with association selects/radios, generating the
+collection automatically.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#button-instance_method" title="#button (instance method)">#<strong>button</strong>(type, *args, &amp;block)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#button_button-instance_method" title="#button_button (instance method)">#<strong>button_button</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates a button:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#collection_check_boxes-instance_method" title="#collection_check_boxes (instance method)">#<strong>collection_check_boxes</strong>(method, collection, value_method, text_method, options = {}, html_options = {}, &amp;block)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates a collection of check boxes for each item in the collection,
+associated with a clickable label.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#collection_radio_buttons-instance_method" title="#collection_radio_buttons (instance method)">#<strong>collection_radio_buttons</strong>(method, collection, value_method, text_method, options = {}, html_options = {}, &amp;block)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Create a collection of radio inputs for the attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#error-instance_method" title="#error (instance method)">#<strong>error</strong>(attribute_name, options = {})  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates an error tag based on the given attribute, only when the attribute
+contains errors.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#error_notification-instance_method" title="#error_notification (instance method)">#<strong>error_notification</strong>(options = {})  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates an error notification message that only appears when the form
+object has some error.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#full_error-instance_method" title="#full_error (instance method)">#<strong>full_error</strong>(attribute_name, options = {})  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return the error but also considering its name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#hint-instance_method" title="#hint (instance method)">#<strong>hint</strong>(attribute_name, options = {})  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates a hint tag for the given attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  ⇒ FormBuilder </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#input-instance_method" title="#input (instance method)">#<strong>input</strong>(attribute_name, options = {}, &amp;block)  ⇒ Object </a>
+    
+
+    
+      (also: #attribute)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Basic input helper, combines all components in the stack to generate input
+html based on options the user define and some guesses through database
+column information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#input_field-instance_method" title="#input_field (instance method)">#<strong>input_field</strong>(attribute_name, options = {})  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates a input tag for the given attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#label-instance_method" title="#label (instance method)">#<strong>label</strong>(attribute_name, *args)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates a default label tag for the given attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#lookup_action-instance_method" title="#lookup_action (instance method)">#<strong>lookup_action</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>The action to be used in lookup.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#lookup_model_names-instance_method" title="#lookup_model_names (instance method)">#<strong>lookup_model_names</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Extract the model names from the object_name mess, ignoring numeric and
+explicit child indexes.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/MapType" title="SimpleForm::MapType (module)">MapType</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/MapType#extended-class_method" title="SimpleForm::MapType.extended (method)">extended</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/MapType#map_type-instance_method" title="SimpleForm::MapType#map_type (method)">map_type</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:initialize">permalink</a>
+  
+    #<strong>initialize</strong>  ⇒ <tt><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder" title="SimpleForm::FormBuilder (class)">FormBuilder</a></span></tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("initialize-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:initialize">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L39">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 39</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="op">*</span><span class="rparen">)</span> <span class="comment">#:nodoc:
+</span>  <span class="kw">super</span>
+  <span class="ivar">@defaults</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:defaults</span><span class="rbracket">]</span>
+  <span class="ivar">@wrapper</span>  <span class="op">=</span> <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="period">.</span><span class="id identifier rubyid_wrapper"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm#wrapper-class_method" title="SimpleForm.wrapper (method)">wrapper</a></span></span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:wrapper</span><span class="rbracket">]</span> <span class="op">||</span> <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="period">.</span><span class="id identifier rubyid_default_wrapper"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm#default_wrapper-instance_method" title="SimpleForm#default_wrapper (method)">default_wrapper</a></span></span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="object-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:object">permalink</a>
+  
+    #<strong>object</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("object-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:object">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L7">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 7</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_object">object</span>
+  <span class="ivar">@object</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="object_name-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:object_name">permalink</a>
+  
+    #<strong>object_name</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("object_name-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:object_name">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute object_name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L7">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 7</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_object_name">object_name</span>
+  <span class="ivar">@object_name</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="template-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:template">permalink</a>
+  
+    #<strong>template</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("template-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:template">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute template</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L7">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 7</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_template">template</span>
+  <span class="ivar">@template</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="wrapper-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:wrapper">permalink</a>
+  
+    #<strong>wrapper</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("wrapper-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:wrapper">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute wrapper</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L7">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 7</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_wrapper">wrapper</span>
+  <span class="ivar">@wrapper</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="discovery_cache-class_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder%2Ediscovery_cache">permalink</a>
+  
+    .<strong>discovery_cache</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("discovery_cache-class_method")).prepend(
+  '<a class="permalink" 
+href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder%2Ediscovery_cache">permalink</a>');
+</script>
+<span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L35">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 35</span>
+
+<span class="kw">def</span> <span class="kw">self</span><span class="period">.</span><span class="id identifier rubyid_discovery_cache">discovery_cache</span>
+  <span class="ivar">@discovery_cache</span> <span class="op">||=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="association-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:association">permalink</a>
+  
+    #<strong>association</strong>(association, options = {}, &amp;block)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("association-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:association">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Helper for dealing with association selects/radios, generating the
+collection automatically. It's just a wrapper to input, so all options
+supported in input are also supported by association. Some extra options
+can also be given:</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_simple_form_for">simple_form_for</span> <span class="ivar">@user</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_f">f</span><span class="op">|</span>
+  <span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_association">association</span> <span class="symbol">:company</span>          <span class="comment"># Company.all
+</span><span class="kw">end</span>
+
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_association">association</span> <span class="symbol">:company</span><span class="comma">,</span> <span class="label">collection:</span> <span class="const">Company</span><span class="period">.</span><span class="id identifier rubyid_all">all</span><span class="lparen">(</span><span class="label">order:</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">name</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
+<span class="comment"># Same as using :order option, but overriding collection</span></code></pre>
+
+<h2>Block</h2>
+
+<p>When a block is given, association simple behaves as a proxy to
+simple_fields_for:</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_association">association</span> <span class="symbol">:company</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_c">c</span><span class="op">|</span>
+  <span class="id identifier rubyid_c">c</span><span class="period">.</span><span class="id identifier rubyid_input">input</span> <span class="symbol">:name</span>
+  <span class="id identifier rubyid_c">c</span><span class="period">.</span><span class="id identifier rubyid_input">input</span> <span class="symbol">:type</span>
+<span class="kw">end</span></code></pre>
+
+<p>From the options above, only :collection can also be supplied.</p>
+
+<p>Please note that the association helper is currently only tested with
+Active Record. Depending on the ORM you are using your mileage may vary.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L176">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 176</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_association">association</span><span class="lparen">(</span><span class="id identifier rubyid_association">association</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+
+  <span class="kw">return</span> <span class="id identifier rubyid_simple_fields_for">simple_fields_for</span><span class="lparen">(</span><span class="op">*</span><span class="lbracket">[</span><span class="id identifier rubyid_association">association</span><span class="comma">,</span>
+    <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span><span class="lparen">(</span><span class="symbol">:collection</span><span class="rparen">)</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rbracket">]</span><span class="period">.</span><span class="id identifier rubyid_compact">compact</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_block_given?">block_given?</span>
+
+  <span class="id identifier rubyid_raise">raise</span> <span class="const">ArgumentError</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Association cannot be used in forms not associated with an object</span><span class="tstring_end">"</span></span> <span class="kw">unless</span> <span class="ivar">@object</span>
+
+  <span class="id identifier rubyid_reflection">reflection</span> <span class="op">=</span> <span class="id identifier rubyid_find_association_reflection">find_association_reflection</span><span class="lparen">(</span><span class="id identifier rubyid_association">association</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_raise">raise</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Association </span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_association">association</span><span class="period">.</span><span class="id identifier rubyid_inspect">inspect</span><span class="embexpr_end">}</span><span class="tstring_content"> not found</span><span class="tstring_end">"</span></span> <span class="kw">unless</span> <span class="id identifier rubyid_reflection">reflection</span>
+
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:as</span><span class="rbracket">]</span> <span class="op">||=</span> <span class="symbol">:select</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:collection</span><span class="rbracket">]</span> <span class="op">||=</span> <span class="id identifier rubyid_fetch_association_collection">fetch_association_collection</span><span class="lparen">(</span><span class="id identifier rubyid_reflection">reflection</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+
+  <span class="id identifier rubyid_attribute">attribute</span> <span class="op">=</span> <span class="id identifier rubyid_build_association_attribute">build_association_attribute</span><span class="lparen">(</span><span class="id identifier rubyid_reflection">reflection</span><span class="comma">,</span> <span class="id identifier rubyid_association">association</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+
+  <span class="id identifier rubyid_input">input</span><span class="lparen">(</span><span class="id identifier rubyid_attribute">attribute</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_merge">merge</span><span class="lparen">(</span><span class="label">reflection:</span> <span class="id identifier rubyid_reflection">reflection</span><span class="rparen">)</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="button-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:button">permalink</a>
+  
+    #<strong>button</strong>(type, *args, &amp;block)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("button-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:button">permalink</a>');
+</script>
+<span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L206">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 206</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_button">button</span><span class="lparen">(</span><span class="id identifier rubyid_type">type</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_args">args</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_args">args</span><span class="period">.</span><span class="id identifier rubyid_extract_options!">extract_options!</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:class</span><span class="rbracket">]</span> <span class="op">=</span> <span class="lbracket">[</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="period">.</span><span class="id identifier rubyid_button_class">button_class</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:class</span><span class="rbracket">]</span><span class="rbracket">]</span><span class="period">.</span><span class="id identifier rubyid_compact">compact</span>
+  <span class="id identifier rubyid_args">args</span> <span class="op">&lt;&lt;</span> <span class="id identifier rubyid_options">options</span>
+  <span class="kw">if</span> <span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:#{</span><span class="id identifier rubyid_type">type</span><span class="embexpr_end">}</span><span class="tstring_content">_button</span><span class="tstring_end">"</span><span class="rparen">)</span>
+    <span class="id identifier rubyid_send">send</span><span class="lparen">(</span><span class="symbol">:#{</span><span class="id identifier rubyid_type">type</span><span class="embexpr_end">}</span><span class="tstring_content">_button</span><span class="tstring_end">"</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_args">args</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="kw">else</span>
+    <span class="id identifier rubyid_send">send</span><span class="lparen">(</span><span class="id identifier rubyid_type">type</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_args">args</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="button_button-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:button_button">permalink</a>
+  
+    #<strong>button_button</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("button_button-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:button_button">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a button:</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_form_for">form_for</span> <span class="ivar">@user</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_f">f</span><span class="op">|</span>
+  <span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_button">button</span> <span class="symbol">:submit</span>
+<span class="kw">end</span></code></pre>
+
+<p>It just acts as a proxy to method name given. We also alias original Rails
+button implementation (3.2 forward (to delegate to the original when
+calling `f.button :button`.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L205">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 205</span>
+
+<span class="id identifier rubyid_alias_method">alias_method</span> <span class="symbol">:button_button</span><span class="comma">,</span> <span class="symbol">:button</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="collection_check_boxes-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:collection_check_boxes">permalink</a>
+  
+    #<strong>collection_check_boxes</strong>(method, collection, value_method, text_method, options = {}, html_options = {}, &amp;block)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("collection_check_boxes-instance_method")).prepend(
+
+  '<a class="permalink" 
+href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:collection_check_boxes">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a collection of check boxes for each item in the collection,
+associated with a clickable label. Use value_method and text_method to
+convert items in the collection for use as text/value in check boxes. You
+can give a symbol or a proc to both value_method and text_method, that will
+be evaluated for each item in the collection.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby">form_for @user do |f|
+  f.collection_check_boxes :options, [[true, 'Yes'] ,[false, 'No']], :first, :last
+end
+
+&lt;input name="user[options][]" type="hidden" value="" /&gt;
+&lt;input id="user_options_true" name="user[options][]" type="checkbox" value="true" /&gt;
+&lt;label class="collection_check_boxes" for="user_options_true"&gt;Yes&lt;/label&gt;
+&lt;input name="user[options][]" type="hidden" value="" /&gt;
+&lt;input id="user_options_false" name="user[options][]" type="checkbox" value="false" /&gt;
+&lt;label class="collection_check_boxes" for="user_options_false"&gt;No&lt;/label&gt;</code></pre>
+
+<p>It is also possible to give a block that should generate the check box +
+label. To wrap the check box with the label, for instance:</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_form_for">form_for</span> <span class="ivar">@user</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_f">f</span><span class="op">|</span>
+  <span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_collection_check_boxes">collection_check_boxes</span><span class="lparen">(</span>
+    <span class="symbol">:options</span><span class="comma">,</span> <span class="lbracket">[</span><span class="lbracket">[</span><span class="kw">true</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">Yes</span><span class="tstring_end">'</span></span><span class="rbracket">]</span> <span class="comma">,</span><span class="lbracket">[</span><span class="kw">false</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">No</span><span class="tstring_end">'</span></span><span class="rbracket">]</span><span class="rbracket">]</span><span class="comma">,</span> <span class="symbol">:first</span><span class="comma">,</span> <span class="symbol">:last</span>
+  <span class="rparen">)</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_b">b</span><span class="op">|</span>
+    <span class="id identifier rubyid_b">b</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="lbrace">{</span> <span class="id identifier rubyid_b">b</span><span class="period">.</span><span class="id identifier rubyid_check_box">check_box</span> <span class="op">+</span> <span class="id identifier rubyid_b">b</span><span class="period">.</span><span class="id identifier rubyid_text">text</span> <span class="rbrace">}</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+
+<h2>Options</h2>
+
+<p>Collection check box accepts some extra options:</p>
+
+<pre class="code ruby"><code class="ruby">* checked  =&gt; the value or values that should be checked initially. Accepts
+              a single item or an array of items. It overrides existing associations.
+
+* disabled =&gt; the value or values that should be disabled. Accepts a single
+              item or an array of items.
+
+* collection_wrapper_tag   =&gt; the tag to wrap the entire collection.
+
+* collection_wrapper_class =&gt; the CSS class to use for collection_wrapper_tag. This option
+                              is ignored if the :collection_wrapper_tag option is blank.
+
+* item_wrapper_tag         =&gt; the tag to wrap each item in the collection.
+
+* item_wrapper_class       =&gt; the CSS class to use for item_wrapper_tag
+
+* a block                  =&gt; to generate the label + check box or any other component.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L420">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+420
+421
+422</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 420</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_collection_check_boxes">collection_check_boxes</span><span class="lparen">(</span><span class="id identifier rubyid_method">method</span><span class="comma">,</span> <span class="id identifier rubyid_collection">collection</span><span class="comma">,</span> <span class="id identifier rubyid_value_method">value_method</span><span class="comma">,</span> <span class="id identifier rubyid_text_method">text_method</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="id identifier rubyid_html_options">html_options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Tags" title="SimpleForm::Tags (module)">Tags</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Tags/CollectionCheckBoxes" title="SimpleForm::Tags::CollectionCheckBoxes (class)">CollectionCheckBoxes</a></span></span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="ivar">@object_name</span><span class="comma">,</span> <span class="id identifier rubyid_method">method</span><span class="comma">,</span> <span class="ivar">@template</span><span class="comma">,</span> <span class="id identifier rubyid_collection">collection</span><span class="comma">,</span> <span class="id identifier rubyid_value_method">value_method</span><span class="comma">,</span> <span class="id identifier rubyid_text_method">text_method</span><span class="comma">,</span> <span class="id identifier rubyid_objectify_options">objectify_options</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="comma">,</span> <span class="ivar">@default_options</span><span class="period">.</span><span class="id identifier rubyid_merge">merge</span><span class="lparen">(</span><span class="id identifier rubyid_html_options">html_options</span><span class="rparen">)</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_render"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Tags/CollectionCheckBoxes#render-instance_method" title="SimpleForm::Tags::CollectionCheckBoxes#render (method)">render</a></span></span><span class="lparen">(</span><span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="collection_radio_buttons-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:collection_radio_buttons">permalink</a>
+  
+    #<strong>collection_radio_buttons</strong>(method, collection, value_method, text_method, options = {}, html_options = {}, &amp;block)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("collection_radio_buttons-instance_method")).prepend(
+
+  '<a class="permalink" 
+href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:collection_radio_buttons">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Create a collection of radio inputs for the attribute. Basically this
+helper will create a radio input associated with a label for each
+text/value option in the collection, using value_method and text_method to
+convert these text/value. You can give a symbol or a proc to both
+value_method and text_method, that will be evaluated for each item in the
+collection.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby">form_for @user do |f|
+  f.collection_radio_buttons :options, [[true, 'Yes'] ,[false, 'No']], :first, :last
+end
+
+&lt;input id="user_options_true" name="user[options]" type="radio" value="true" /&gt;
+&lt;label class="collection_radio_buttons" for="user_options_true"&gt;Yes&lt;/label&gt;
+&lt;input id="user_options_false" name="user[options]" type="radio" value="false" /&gt;
+&lt;label class="collection_radio_buttons" for="user_options_false"&gt;No&lt;/label&gt;</code></pre>
+
+<p>It is also possible to give a block that should generate the radio + label.
+To wrap the radio with the label, for instance:</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_form_for">form_for</span> <span class="ivar">@user</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_f">f</span><span class="op">|</span>
+  <span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_collection_radio_buttons">collection_radio_buttons</span><span class="lparen">(</span>
+    <span class="symbol">:options</span><span class="comma">,</span> <span class="lbracket">[</span><span class="lbracket">[</span><span class="kw">true</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">Yes</span><span class="tstring_end">'</span></span><span class="rbracket">]</span> <span class="comma">,</span><span class="lbracket">[</span><span class="kw">false</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">No</span><span class="tstring_end">'</span></span><span class="rbracket">]</span><span class="rbracket">]</span><span class="comma">,</span> <span class="symbol">:first</span><span class="comma">,</span> <span class="symbol">:last</span>
+  <span class="rparen">)</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_b">b</span><span class="op">|</span>
+    <span class="id identifier rubyid_b">b</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="lbrace">{</span> <span class="id identifier rubyid_b">b</span><span class="period">.</span><span class="id identifier rubyid_radio_button">radio_button</span> <span class="op">+</span> <span class="id identifier rubyid_b">b</span><span class="period">.</span><span class="id identifier rubyid_text">text</span> <span class="rbrace">}</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+
+<h2>Options</h2>
+
+<p>Collection radio accepts some extra options:</p>
+
+<pre class="code ruby"><code class="ruby">* checked  =&gt; the value that should be checked initially.
+
+* disabled =&gt; the value or values that should be disabled. Accepts a single
+              item or an array of items.
+
+* collection_wrapper_tag   =&gt; the tag to wrap the entire collection.
+
+* collection_wrapper_class =&gt; the CSS class to use for collection_wrapper_tag
+
+* item_wrapper_tag         =&gt; the tag to wrap each item in the collection.
+
+* item_wrapper_class       =&gt; the CSS class to use for item_wrapper_tag
+
+* a block                  =&gt; to generate the label + radio or any other component.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L366">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+366
+367
+368</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 366</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_collection_radio_buttons">collection_radio_buttons</span><span class="lparen">(</span><span class="id identifier rubyid_method">method</span><span class="comma">,</span> <span class="id identifier rubyid_collection">collection</span><span class="comma">,</span> <span class="id identifier rubyid_value_method">value_method</span><span class="comma">,</span> <span class="id identifier rubyid_text_method">text_method</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="id identifier rubyid_html_options">html_options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Tags" title="SimpleForm::Tags (module)">Tags</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Tags/CollectionRadioButtons" title="SimpleForm::Tags::CollectionRadioButtons (class)">CollectionRadioButtons</a></span></span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="ivar">@object_name</span><span class="comma">,</span> <span class="id identifier rubyid_method">method</span><span class="comma">,</span> <span class="ivar">@template</span><span class="comma">,</span> <span class="id identifier rubyid_collection">collection</span><span class="comma">,</span> <span class="id identifier rubyid_value_method">value_method</span><span class="comma">,</span> <span class="id identifier rubyid_text_method">text_method</span><span class="comma">,</span> <span class="id identifier rubyid_objectify_options">objectify_options</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="comma">,</span> <span class="ivar">@default_options</span><span class="period">.</span><span class="id identifier rubyid_merge">merge</span><span class="lparen">(</span><span class="id identifier rubyid_html_options">html_options</span><span class="rparen">)</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_render"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Tags/CollectionRadioButtons#render-instance_method" title="SimpleForm::Tags::CollectionRadioButtons#render (method)">render</a></span></span><span class="lparen">(</span><span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="error-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:error">permalink</a>
+  
+    #<strong>error</strong>(attribute_name, options = {})  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("error-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:error">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates an error tag based on the given attribute, only when the attribute
+contains errors. All the given options are sent as :error_html.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_error">error</span> <span class="symbol">:name</span>
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_error">error</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="label">id:</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">cool_error</span><span class="tstring_end">"</span></span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L225">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+225
+226
+227
+228
+229
+230
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 225</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_error">error</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:error_html</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_except">except</span><span class="lparen">(</span><span class="symbol">:error_tag</span><span class="comma">,</span> <span class="symbol">:error_prefix</span><span class="comma">,</span> <span class="symbol">:error_method</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_column">column</span>      <span class="op">=</span> <span class="id identifier rubyid_find_attribute_column">find_attribute_column</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_input_type">input_type</span>  <span class="op">=</span> <span class="id identifier rubyid_default_input_type">default_input_type</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_wrapper">wrapper</span><span class="period">.</span><span class="id identifier rubyid_find">find</span><span class="lparen">(</span><span class="symbol">:error</span><span class="rparen">)</span><span class="period">.</span>
+    <span class="id identifier rubyid_render">render</span><span class="lparen">(</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs" title="SimpleForm::Inputs (module)">Inputs</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs/Base" title="SimpleForm::Inputs::Base (class)">Base</a></span></span><span class="period">.</span><span class="id identifier rubyid_new"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs/Base#initialize-instance_method" title="SimpleForm::Inputs::Base#initialize (method)">new</a></span></span><span class="lparen">(</span><span class="kw">self</span><span class="comma">,</span> <span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_input_type">input_type</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="error_notification-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:error_notification">permalink</a>
+  
+    #<strong>error_notification</strong>(options = {})  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("error_notification-instance_method")).prepend(
+
+  '<a class="permalink" 
+href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:error_notification">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates an error notification message that only appears when the form
+object has some error. You can give a specific message with the :message
+option, otherwise it will look for a message using I18n. All other options
+given are passed straight as html options to the html tag.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_error_notification">error_notification</span>
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_error_notification">error_notification</span> <span class="label">message:</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">Something went wrong</span><span class="tstring_end">'</span></span>
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_error_notification">error_notification</span> <span class="label">id:</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">user_error_message</span><span class="tstring_end">'</span></span><span class="comma">,</span> <span class="label">class:</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">form_error</span><span class="tstring_end">'</span></span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L315">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+315
+316
+317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 315</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_error_notification">error_notification</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/ErrorNotification" title="SimpleForm::ErrorNotification (class)">ErrorNotification</a></span></span><span class="period">.</span><span class="id identifier rubyid_new"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/ErrorNotification#initialize-instance_method" title="SimpleForm::ErrorNotification#initialize (method)">new</a></span></span><span class="lparen">(</span><span class="kw">self</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_render"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/ErrorNotification#render-instance_method" title="SimpleForm::ErrorNotification#render (method)">render</a></span></span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="full_error-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:full_error">permalink</a>
+  
+    #<strong>full_error</strong>(attribute_name, options = {})  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("full_error-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:full_error">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return the error but also considering its name. This is used when errors
+for a hidden field need to be shown.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_full_error">full_error</span> <span class="symbol">:token</span> <span class="comment">#=&gt; &lt;span class="error"&gt;Token is invalid&lt;/span&gt;</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L242">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 242</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_full_error">full_error</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:error_prefix</span><span class="rbracket">]</span> <span class="op">||=</span> <span class="kw">if</span> <span class="id identifier rubyid_object">object</span><span class="period">.</span><span class="id identifier rubyid_class">class</span><span class="period">.</span><span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:human_attribute_name</span><span class="rparen">)</span>
+    <span class="id identifier rubyid_object">object</span><span class="period">.</span><span class="id identifier rubyid_class">class</span><span class="period">.</span><span class="id identifier rubyid_human_attribute_name">human_attribute_name</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span><span class="rparen">)</span>
+  <span class="kw">else</span>
+    <span class="id identifier rubyid_attribute_name">attribute_name</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span><span class="period">.</span><span class="id identifier rubyid_humanize">humanize</span>
+  <span class="kw">end</span>
+
+  <span class="id identifier rubyid_error">error</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hint-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:hint">permalink</a>
+  
+    #<strong>hint</strong>(attribute_name, options = {})  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("hint-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:hint">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a hint tag for the given attribute. Accepts a symbol indicating an
+attribute for I18n lookup or a string. All the given options are sent as
+:hint_html.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_hint">hint</span> <span class="symbol">:name</span> <span class="comment"># Do I18n lookup
+</span><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_hint">hint</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="label">id:</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">cool_hint</span><span class="tstring_end">"</span></span>
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_hint">hint</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Don't forget to accept this</span><span class="tstring_end">"</span></span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L264">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 264</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_hint">hint</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:hint_html</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_except">except</span><span class="lparen">(</span><span class="symbol">:hint_tag</span><span class="comma">,</span> <span class="symbol">:hint</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id identifier rubyid_attribute_name">attribute_name</span><span class="period">.</span><span class="id identifier rubyid_is_a?">is_a?</span><span class="lparen">(</span><span class="const">String</span><span class="rparen">)</span>
+    <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:hint</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_attribute_name">attribute_name</span>
+    <span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_input_type">input_type</span> <span class="op">=</span> <span class="kw">nil</span><span class="comma">,</span> <span class="kw">nil</span><span class="comma">,</span> <span class="kw">nil</span>
+  <span class="kw">else</span>
+    <span class="id identifier rubyid_column">column</span>      <span class="op">=</span> <span class="id identifier rubyid_find_attribute_column">find_attribute_column</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="rparen">)</span>
+    <span class="id identifier rubyid_input_type">input_type</span>  <span class="op">=</span> <span class="id identifier rubyid_default_input_type">default_input_type</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+
+  <span class="id identifier rubyid_wrapper">wrapper</span><span class="period">.</span><span class="id identifier rubyid_find">find</span><span class="lparen">(</span><span class="symbol">:hint</span><span class="rparen">)</span><span class="period">.</span>
+    <span class="id identifier rubyid_render">render</span><span class="lparen">(</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs" title="SimpleForm::Inputs (module)">Inputs</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs/Base" title="SimpleForm::Inputs::Base (class)">Base</a></span></span><span class="period">.</span><span class="id identifier rubyid_new"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs/Base#initialize-instance_method" title="SimpleForm::Inputs::Base#initialize (method)">new</a></span></span><span class="lparen">(</span><span class="kw">self</span><span class="comma">,</span> <span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_input_type">input_type</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="input-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:input">permalink</a>
+  
+    #<strong>input</strong>(attribute_name, options = {}, &amp;block)  ⇒ <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id="attribute-instance_method">attribute</span></span>
+    </span>
+  
+
+  
+</h3><script>
+$(document.getElementById("input-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:input">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Basic input helper, combines all components in the stack to generate input
+html based on options the user define and some guesses through database
+column information. By default a call to input will generate label + input
++ hint (when defined) + errors (when exists), and all can be configured
+inside a wrapper html.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="comment"># Imagine @user has error "can't be blank" on name
+</span><span class="id identifier rubyid_simple_form_for">simple_form_for</span> <span class="ivar">@user</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_f">f</span><span class="op">|</span>
+  <span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_input">input</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="label">hint:</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">My hint</span><span class="tstring_end">'</span></span>
+<span class="kw">end</span></code></pre>
+
+<p>This is the output html (only the input portion, not the form):</p>
+
+<pre class="code ruby"><code class="ruby">&lt;label class="string required" for="user_name"&gt;
+  &lt;abbr title="required"&gt;*&lt;/abbr&gt; Super User Name!
+&lt;/label&gt;
+&lt;input class="string required" id="user_name" maxlength="100"
+   name="user[name]" type="text" value="Carlos" /&gt;
+&lt;span class="hint"&gt;My hint&lt;/span&gt;
+&lt;span class="error"&gt;can't be blank&lt;/span&gt;</code></pre>
+
+<p>Each database type will render a default input, based on some mappings and
+heuristic to determine which is the best option.</p>
+
+<p>You have some options for the input to enable/disable some functions:</p>
+
+<pre class="code ruby"><code class="ruby">as: allows you to define the input type you want, for instance you
+       can use it to generate a text field for a date column.
+
+required: defines whether this attribute is required or not. True
+            by default.</code></pre>
+
+<p>The fact SimpleForm is built in components allow the interface to be
+unified. So, for instance, if you need to disable :hint for a given input,
+you can pass hint: false. The same works for :error, :label and :wrapper.</p>
+
+<p>Besides the html for any component can be changed. So, if you want to
+change the label html you just need to give a hash to :label_html. To
+configure the input html, supply :input_html instead and so on.</p>
+
+<h2>Options</h2>
+
+<p>Some inputs, as datetime, time and select allow you to give extra options,
+like prompt and/or include blank. Such options are given in plainly:</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_input">input</span> <span class="symbol">:created_at</span><span class="comma">,</span> <span class="label">include_blank:</span> <span class="kw">true</span></code></pre>
+
+<h2>Collection</h2>
+
+<p>When playing with collections (:radio_buttons, :check_boxes and :select
+inputs), you have three extra options:</p>
+
+<pre class="code ruby"><code class="ruby">collection: use to determine the collection to generate the radio or select
+
+label_method: the method to apply on the array collection to get the label
+
+value_method: the method to apply on the array collection to get the value</code></pre>
+
+<h2>Priority</h2>
+
+<p>Some inputs, as :time_zone and :country accepts a :priority option. If none
+is given SimpleForm.time_zone_priority and SimpleForm.country_priority are
+used respectively.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L110">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+110
+111
+112
+113
+114
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 110</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_input">input</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="ivar">@defaults</span><span class="period">.</span><span class="id identifier rubyid_deep_dup">deep_dup</span><span class="period">.</span><span class="id identifier rubyid_deep_merge">deep_merge</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span> <span class="kw">if</span> <span class="ivar">@defaults</span>
+
+  <span class="id identifier rubyid_input">input</span>   <span class="op">=</span> <span class="id identifier rubyid_find_input">find_input</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_wrapper">wrapper</span> <span class="op">=</span> <span class="id identifier rubyid_find_wrapper">find_wrapper</span><span class="lparen">(</span><span class="id identifier rubyid_input">input</span><span class="period">.</span><span class="id identifier rubyid_input_type">input_type</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+
+  <span class="id identifier rubyid_wrapper">wrapper</span><span class="period">.</span><span class="id identifier rubyid_render">render</span> <span class="id identifier rubyid_input">input</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="input_field-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:input_field">permalink</a>
+  
+    #<strong>input_field</strong>(attribute_name, options = {})  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("input_field-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:input_field">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a input tag for the given attribute. All the given options are sent
+as :input_html.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_simple_form_for">simple_form_for</span> <span class="ivar">@user</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_f">f</span><span class="op">|</span>
+  <span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_input_field">input_field</span> <span class="symbol">:name</span>
+<span class="kw">end</span></code></pre>
+
+<p>This is the output html (only the input portion, not the form):</p>
+
+<pre class="code ruby"><code class="ruby">&lt;input class="string required" id="user_name" maxlength="100"
+   name="user[name]" type="text" value="Carlos" /&gt;</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L134">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 134</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_input_field">input_field</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_components">components</span> <span class="op">=</span> <span class="lparen">(</span><span class="id identifier rubyid_wrapper">wrapper</span><span class="period">.</span><span class="id identifier rubyid_components">components</span><span class="period">.</span><span class="id identifier rubyid_map">map</span><span class="lparen">(</span><span class="op">&amp;</span><span class="symbol">:namespace</span><span class="rparen">)</span> <span class="op">&amp;</span> <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#ATTRIBUTE_COMPONENTS-constant" title="SimpleForm::FormBuilder::ATTRIBUTE_COMPONENTS (constant)">ATTRIBUTE_COMPONENTS</a></span></span><span class="rparen">)</span>
+
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:input_html</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_except">except</span><span class="lparen">(</span><span class="symbol">:as</span><span class="comma">,</span> <span class="symbol">:boolean_style</span><span class="comma">,</span> <span class="symbol">:collection</span><span class="comma">,</span> <span class="symbol">:label_method</span><span class="comma">,</span> <span class="symbol">:value_method</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_components">components</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="ivar">@defaults</span><span class="period">.</span><span class="id identifier rubyid_deep_dup">deep_dup</span><span class="period">.</span><span class="id identifier rubyid_deep_merge">deep_merge</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span> <span class="kw">if</span> <span class="ivar">@defaults</span>
+
+  <span class="id identifier rubyid_input">input</span>      <span class="op">=</span> <span class="id identifier rubyid_find_input">find_input</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_wrapper">wrapper</span>    <span class="op">=</span> <span class="id identifier rubyid_find_wrapper">find_wrapper</span><span class="lparen">(</span><span class="id identifier rubyid_input">input</span><span class="period">.</span><span class="id identifier rubyid_input_type">input_type</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_components">components</span> <span class="op">=</span> <span class="id identifier rubyid_components">components</span><span class="period">.</span><span class="id identifier rubyid_concat">concat</span><span class="lparen">(</span><span class="lbracket">[</span><span class="symbol">:input</span><span class="rbracket">]</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_map">map</span> <span class="lbrace">{</span> <span class="op">|</span><span class="id identifier rubyid_component">component</span><span class="op">|</span> <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers" title="SimpleForm::Wrappers (module)">Wrappers</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers/Leaf" title="SimpleForm::Wrappers::Leaf (class)">Leaf</a></span></span><span class="period">.</span><span class="id identifier rubyid_new"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers/Leaf#initialize-instance_method" title="SimpleForm::Wrappers::Leaf#initialize (method)">new</a></span></span><span class="lparen">(</span><span class="id identifier rubyid_component">component</span><span class="rparen">)</span> <span class="rbrace">}</span>
+
+  <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers" title="SimpleForm::Wrappers (module)">Wrappers</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers/Root" title="SimpleForm::Wrappers::Root (class)">Root</a></span></span><span class="period">.</span><span class="id identifier rubyid_new"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers/Root#initialize-instance_method" title="SimpleForm::Wrappers::Root#initialize (method)">new</a></span></span><span class="lparen">(</span><span class="id identifier rubyid_components">components</span><span class="comma">,</span> <span class="id identifier rubyid_wrapper">wrapper</span><span class="period">.</span><span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_merge">merge</span><span class="lparen">(</span><span class="label">wrapper:</span> <span class="kw">false</span><span class="rparen">)</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_render"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Wrappers/Root#render-instance_method" title="SimpleForm::Wrappers::Root#render (method)">render</a></span></span> <span class="id identifier rubyid_input">input</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="label-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:label">permalink</a>
+  
+    #<strong>label</strong>(attribute_name, *args)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("label-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:label">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a default label tag for the given attribute. You can give a label
+through the :label option or using i18n. All the given options are sent as
+:label_html.</p>
+
+<h2>Examples</h2>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="symbol">:name</span>                     <span class="comment"># Do I18n lookup
+</span><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Name</span><span class="tstring_end">"</span></span>             <span class="comment"># Same behavior as Rails, do not add required tag
+</span><span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="label">label:</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Name</span><span class="tstring_end">"</span></span>   <span class="comment"># Same as above, but adds required tag
+</span>
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="label">required:</span> <span class="kw">false</span>
+<span class="id identifier rubyid_f">f</span><span class="period">.</span><span class="id identifier rubyid_label">label</span> <span class="symbol">:name</span><span class="comma">,</span> <span class="label">id:</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">cool_label</span><span class="tstring_end">"</span></span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L293">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 293</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_label">label</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_args">args</span><span class="rparen">)</span>
+  <span class="kw">return</span> <span class="kw">super</span> <span class="kw">if</span> <span class="id identifier rubyid_args">args</span><span class="period">.</span><span class="id identifier rubyid_first">first</span><span class="period">.</span><span class="id identifier rubyid_is_a?">is_a?</span><span class="lparen">(</span><span class="const">String</span><span class="rparen">)</span> <span class="op">||</span> <span class="id identifier rubyid_block_given?">block_given?</span>
+
+  <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_args">args</span><span class="period">.</span><span class="id identifier rubyid_extract_options!">extract_options!</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:label_html</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_except">except</span><span class="lparen">(</span><span class="symbol">:label</span><span class="comma">,</span> <span class="symbol">:required</span><span class="comma">,</span> <span class="symbol">:as</span><span class="rparen">)</span>
+
+  <span class="id identifier rubyid_column">column</span>      <span class="op">=</span> <span class="id identifier rubyid_find_attribute_column">find_attribute_column</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_input_type">input_type</span>  <span class="op">=</span> <span class="id identifier rubyid_default_input_type">default_input_type</span><span class="lparen">(</span><span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm" title="SimpleForm (module)">SimpleForm</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs" title="SimpleForm::Inputs (module)">Inputs</a></span></span><span class="op">::</span><span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs/Base" title="SimpleForm::Inputs::Base (class)">Base</a></span></span><span class="period">.</span><span class="id identifier rubyid_new"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/Inputs/Base#initialize-instance_method" title="SimpleForm::Inputs::Base#initialize (method)">new</a></span></span><span class="lparen">(</span><span class="kw">self</span><span class="comma">,</span> <span class="id identifier rubyid_attribute_name">attribute_name</span><span class="comma">,</span> <span class="id identifier rubyid_column">column</span><span class="comma">,</span> <span class="id identifier rubyid_input_type">input_type</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_label">label</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lookup_action-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:lookup_action">permalink</a>
+  
+    #<strong>lookup_action</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("lookup_action-instance_method")).prepend(
+  '<a class="permalink" href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:lookup_action">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>The action to be used in lookup.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L443">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+443
+444
+445
+446
+447
+448
+449
+450</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 443</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_lookup_action">lookup_action</span> <span class="comment">#:nodoc:
+</span>  <span class="ivar">@lookup_action</span> <span class="op">||=</span> <span class="kw">begin</span>
+    <span class="id identifier rubyid_action">action</span> <span class="op">=</span> <span class="id identifier rubyid_template">template</span><span class="period">.</span><span class="id identifier rubyid_controller">controller</span> <span class="op">&amp;&amp;</span> <span class="id identifier rubyid_template">template</span><span class="period">.</span><span class="id identifier rubyid_controller">controller</span><span class="period">.</span><span class="id identifier rubyid_action_name">action_name</span>
+    <span class="kw">return</span> <span class="kw">unless</span> <span class="id identifier rubyid_action">action</span>
+    <span class="id identifier rubyid_action">action</span> <span class="op">=</span> <span class="id identifier rubyid_action">action</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span>
+    <span class="const"><span class="object_link"><a href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm/FormBuilder#ACTIONS-constant" title="SimpleForm::FormBuilder::ACTIONS (constant)">ACTIONS</a></span></span><span class="lbracket">[</span><span class="id identifier rubyid_action">action</span><span class="rbracket">]</span> <span class="op">||</span> <span class="id identifier rubyid_action">action</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lookup_model_names-instance_method"><a class="permalink" href="http://www.rubydoc.info/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:lookup_model_names">permalink</a>
+  
+    #<strong>lookup_model_names</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("lookup_model_names-instance_method")).prepend(
+
+  '<a class="permalink" 
+href="/github/plataformatec/simple_form/master/SimpleForm%2FFormBuilder:lookup_model_names">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Extract the model names from the object_name mess, ignoring numeric and
+explicit child indexes.</p>
+
+<p>Example:</p>
+
+<p><a href="http://blocks_attributes/">route</a>[<a href="http://blocks_learning_object_attributes/">0]</a>[<a href="http://foo_attributes/">1]</a></p>
+<dl class="rdoc-list"><dt>“route”, “blocks”, “blocks_learning_object”, “foo”</dt>
+<dd></dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="#" class="toggleSource">View source</a>]</span> [<a target="_new" href="https://github.com/plataformatec/simple_form/blob/master/lib/simple_form/form_builder.rb#L432">View on GitHub</a>]<table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+432
+433
+434
+435
+436
+437
+438
+439
+440</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/simple_form/form_builder.rb', line 432</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_lookup_model_names">lookup_model_names</span> <span class="comment">#:nodoc:
+</span>  <span class="ivar">@lookup_model_names</span> <span class="op">||=</span> <span class="kw">begin</span>
+    <span class="id identifier rubyid_child_index">child_index</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:child_index</span><span class="rbracket">]</span>
+    <span class="id identifier rubyid_names">names</span> <span class="op">=</span> <span class="id identifier rubyid_object_name">object_name</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span><span class="period">.</span><span class="id identifier rubyid_scan">scan</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">(?!\d)\w+</span><span class="regexp_end">/</span></span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_flatten">flatten</span>
+    <span class="id identifier rubyid_names">names</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span><span class="lparen">(</span><span class="id identifier rubyid_child_index">child_index</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_child_index">child_index</span>
+    <span class="id identifier rubyid_names">names</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="lbrace">{</span> <span class="op">|</span><span class="id identifier rubyid_name">name</span><span class="op">|</span> <span class="id identifier rubyid_name">name</span><span class="period">.</span><span class="id identifier rubyid_gsub!">gsub!</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">_attributes</span><span class="tstring_end">'</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_end">'</span></span><span class="rparen">)</span> <span class="rbrace">}</span>
+    <span class="id identifier rubyid_names">names</span><span class="period">.</span><span class="id identifier rubyid_freeze">freeze</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar 17 20:06:21 2017 by
+  <a href="http://yardoc.org/" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.8 (ruby-2.3.1).
+</div>
+
+
+  <script src="Class:%20SimpleForm::FormBuilder%20%E2%80%94%20Documentation%20for%20plataformatec_simple_form%20%28master%29-Dateien/js" type="text/javascript"></script>
+  <script type="text/javascript">clicky.init(246206);</script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="http://static.getclicky.com/246206ns.gif" /></p></noscript>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7172246-5', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+
+    </div>
+  
+</body></html>

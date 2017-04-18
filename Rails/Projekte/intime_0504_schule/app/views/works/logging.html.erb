@@ -1,0 +1,46 @@
+<%- model_class = Work -%>
+<div class="container-fluid">
+  <div class="page-header">
+    <h2 class="text-center">Working Time Registration <small>for <%= @user.name %></small></h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <div id="time" class="big text-center"></div>
+      <% w = @user.works.where(end: nil).first %>
+      <% if w %>
+        <p class="bg-warning text-center">You are already working...</p>
+        <%= button_to "End of Work",
+          user_end_path(user_id: current_user.id, id: w.id),
+          :method => :patch, 
+          :class => 'btn btn-danger btn-lg btn-block' %>
+      <% else %>
+        <p class="bg-warning text-center">You aren't working now...</p>
+          <%= button_to "Start of Work",
+          user_start_path(user_id: current_user.id), 
+          :method => :post, 
+          :class => 'btn btn-success btn-lg btn-block' %>
+      <% end %>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3 distance">
+      <%= button_to "More features",
+      user_works_path(user_id: current_user.id), 
+      :method => :get, 
+      :class => 'btn btn-info btn-lg btn-block' %>
+    </div>
+    <div class="col-md-3 distance">
+      <%= button_to "Logout",
+      session_path, method: :delete, 
+      :class => 'btn btn-warning btn-lg btn-block' %>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>

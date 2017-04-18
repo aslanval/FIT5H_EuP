@@ -1,0 +1,53 @@
+<%- model_class = Event -%>   
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th><%= model_class.human_attribute_name(:title) %></th>
+        <th><%= model_class.human_attribute_name(:user) %></th>
+        <th><%= model_class.human_attribute_name(:start) %></th>
+        <th><%= model_class.human_attribute_name(:end) %></th>
+        <th><%= model_class.human_attribute_name(:type) %></th>
+        <th><%= model_class.human_attribute_name(:status) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% events.each do |event| %>
+        <tr>
+          <td><%= event.title %></td>
+          <td><%= event.user.name  %></td>
+          <td><%= event.start.strftime("%d.%m.%Y %H:%M:%S") %></td>
+          <td><%= event.end.strftime("%d.%m.%Y %H:%M:%S") %></td>
+          <td><%= if event.color.empty?
+                    "Other"
+                  elsif event.color == "green"
+                    "Holiday"
+                  elsif event.color == "red"
+                    "Project"
+                  elsif event.color == "black"
+                    "Seminar"
+                  end %></td>
+          <td><%= status(event.accepted) %></td>
+          <% if current_user_moderator? %>
+            <td>
+                <%= button_to "accept",
+                          event_path(event.id),
+                          params: {event: { accepted: true}},
+                          :method => :patch, 
+                          :class => 'btn btn-primary btn-xs btn-block' %>
+                <%= button_to "decline",
+                          event_path(event.id),
+                          params: {event: { accepted: false}},
+                          :method => :patch, 
+                          :class => 'btn btn-warning btn-xs btn-block' %>
+                <%= button_to "delete",
+                          event_path(event.id),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', 
+                          :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-danger btn-xs btn-block' %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

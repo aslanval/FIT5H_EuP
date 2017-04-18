@@ -1,0 +1,14 @@
+Hiermit werden nur die Ausleihen angezeigt:
+1) in models -> lending.rb
+scope :lended_open, -> { where(return_date: nil, user_id: user_id )}
+
+oder daraus 2 scopes machen:
+
+scope :given_user, -> user_id { where(user_id: usr_id)}
+scope :lended_open, -> { where(return_date: nil)}
+
+2) im lendings controller
+@lendings = Lending.lended_open
+damit die standard instanzvariable ersetzen
+
+

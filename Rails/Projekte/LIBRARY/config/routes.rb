@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :overview
-  resources :lendings
 	root 'authors#index'
 	resource :session
-	resources :users
+	resources :users do
+		resources :lendings
+	end
   resources :authors do
   	resources :books
   end

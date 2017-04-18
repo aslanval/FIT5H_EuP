@@ -8,8 +8,7 @@
       <% elsif current_user %>
       	<li><%= link_to 'Profil', users_path %></li>
       <% end %>
-      <li><%= link_to 'Lendings', lendings_path if current_user %></li>
-      <li><%= link_to 'Book Overview', overview_index_path if current_user %></li>
+      <li><%= link_to 'Lendings', user_lendings_path(current_user.id) if current_user %></li>
     </ul>
   </div>
   <div class="top-bar-right">
